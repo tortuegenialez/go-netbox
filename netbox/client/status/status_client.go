@@ -49,7 +49,7 @@ type ClientService interface {
 }
 
 /*
-  StatusList A lightweight read-only endpoint for conveying NetBox's current operational status.
+StatusList A lightweight read-only endpoint for conveying NetBox's current operational status.
 */
 func (a *Client) StatusList(params *StatusListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*StatusListOK, error) {
 	// TODO: Validate the params before sending
@@ -62,7 +62,7 @@ func (a *Client) StatusList(params *StatusListParams, authInfo runtime.ClientAut
 		PathPattern:        "/status/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &StatusListReader{formats: a.formats},
 		AuthInfo:           authInfo,

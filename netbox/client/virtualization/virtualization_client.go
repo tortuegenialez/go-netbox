@@ -137,7 +137,7 @@ type ClientService interface {
 }
 
 /*
-  VirtualizationClusterGroupsBulkDelete virtualization cluster groups bulk delete API
+VirtualizationClusterGroupsBulkDelete virtualization cluster groups bulk delete API
 */
 func (a *Client) VirtualizationClusterGroupsBulkDelete(params *VirtualizationClusterGroupsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -150,7 +150,7 @@ func (a *Client) VirtualizationClusterGroupsBulkDelete(params *VirtualizationClu
 		PathPattern:        "/virtualization/cluster-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -175,7 +175,7 @@ func (a *Client) VirtualizationClusterGroupsBulkDelete(params *VirtualizationClu
 }
 
 /*
-  VirtualizationClusterGroupsBulkPartialUpdate virtualization cluster groups bulk partial update API
+VirtualizationClusterGroupsBulkPartialUpdate virtualization cluster groups bulk partial update API
 */
 func (a *Client) VirtualizationClusterGroupsBulkPartialUpdate(params *VirtualizationClusterGroupsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -188,7 +188,7 @@ func (a *Client) VirtualizationClusterGroupsBulkPartialUpdate(params *Virtualiza
 		PathPattern:        "/virtualization/cluster-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -213,7 +213,7 @@ func (a *Client) VirtualizationClusterGroupsBulkPartialUpdate(params *Virtualiza
 }
 
 /*
-  VirtualizationClusterGroupsBulkUpdate virtualization cluster groups bulk update API
+VirtualizationClusterGroupsBulkUpdate virtualization cluster groups bulk update API
 */
 func (a *Client) VirtualizationClusterGroupsBulkUpdate(params *VirtualizationClusterGroupsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -226,7 +226,7 @@ func (a *Client) VirtualizationClusterGroupsBulkUpdate(params *VirtualizationClu
 		PathPattern:        "/virtualization/cluster-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -251,7 +251,7 @@ func (a *Client) VirtualizationClusterGroupsBulkUpdate(params *VirtualizationClu
 }
 
 /*
-  VirtualizationClusterGroupsCreate virtualization cluster groups create API
+VirtualizationClusterGroupsCreate virtualization cluster groups create API
 */
 func (a *Client) VirtualizationClusterGroupsCreate(params *VirtualizationClusterGroupsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -264,7 +264,7 @@ func (a *Client) VirtualizationClusterGroupsCreate(params *VirtualizationCluster
 		PathPattern:        "/virtualization/cluster-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -289,7 +289,7 @@ func (a *Client) VirtualizationClusterGroupsCreate(params *VirtualizationCluster
 }
 
 /*
-  VirtualizationClusterGroupsDelete virtualization cluster groups delete API
+VirtualizationClusterGroupsDelete virtualization cluster groups delete API
 */
 func (a *Client) VirtualizationClusterGroupsDelete(params *VirtualizationClusterGroupsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -302,7 +302,7 @@ func (a *Client) VirtualizationClusterGroupsDelete(params *VirtualizationCluster
 		PathPattern:        "/virtualization/cluster-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -327,7 +327,7 @@ func (a *Client) VirtualizationClusterGroupsDelete(params *VirtualizationCluster
 }
 
 /*
-  VirtualizationClusterGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
+VirtualizationClusterGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) VirtualizationClusterGroupsList(params *VirtualizationClusterGroupsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsListOK, error) {
 	// TODO: Validate the params before sending
@@ -340,7 +340,7 @@ func (a *Client) VirtualizationClusterGroupsList(params *VirtualizationClusterGr
 		PathPattern:        "/virtualization/cluster-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -365,7 +365,7 @@ func (a *Client) VirtualizationClusterGroupsList(params *VirtualizationClusterGr
 }
 
 /*
-  VirtualizationClusterGroupsPartialUpdate virtualization cluster groups partial update API
+VirtualizationClusterGroupsPartialUpdate virtualization cluster groups partial update API
 */
 func (a *Client) VirtualizationClusterGroupsPartialUpdate(params *VirtualizationClusterGroupsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -378,7 +378,7 @@ func (a *Client) VirtualizationClusterGroupsPartialUpdate(params *Virtualization
 		PathPattern:        "/virtualization/cluster-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -403,7 +403,7 @@ func (a *Client) VirtualizationClusterGroupsPartialUpdate(params *Virtualization
 }
 
 /*
-  VirtualizationClusterGroupsRead virtualization cluster groups read API
+VirtualizationClusterGroupsRead virtualization cluster groups read API
 */
 func (a *Client) VirtualizationClusterGroupsRead(params *VirtualizationClusterGroupsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -416,7 +416,7 @@ func (a *Client) VirtualizationClusterGroupsRead(params *VirtualizationClusterGr
 		PathPattern:        "/virtualization/cluster-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -441,7 +441,7 @@ func (a *Client) VirtualizationClusterGroupsRead(params *VirtualizationClusterGr
 }
 
 /*
-  VirtualizationClusterGroupsUpdate virtualization cluster groups update API
+VirtualizationClusterGroupsUpdate virtualization cluster groups update API
 */
 func (a *Client) VirtualizationClusterGroupsUpdate(params *VirtualizationClusterGroupsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterGroupsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -454,7 +454,7 @@ func (a *Client) VirtualizationClusterGroupsUpdate(params *VirtualizationCluster
 		PathPattern:        "/virtualization/cluster-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterGroupsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -479,7 +479,7 @@ func (a *Client) VirtualizationClusterGroupsUpdate(params *VirtualizationCluster
 }
 
 /*
-  VirtualizationClusterTypesBulkDelete virtualization cluster types bulk delete API
+VirtualizationClusterTypesBulkDelete virtualization cluster types bulk delete API
 */
 func (a *Client) VirtualizationClusterTypesBulkDelete(params *VirtualizationClusterTypesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -492,7 +492,7 @@ func (a *Client) VirtualizationClusterTypesBulkDelete(params *VirtualizationClus
 		PathPattern:        "/virtualization/cluster-types/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -517,7 +517,7 @@ func (a *Client) VirtualizationClusterTypesBulkDelete(params *VirtualizationClus
 }
 
 /*
-  VirtualizationClusterTypesBulkPartialUpdate virtualization cluster types bulk partial update API
+VirtualizationClusterTypesBulkPartialUpdate virtualization cluster types bulk partial update API
 */
 func (a *Client) VirtualizationClusterTypesBulkPartialUpdate(params *VirtualizationClusterTypesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -530,7 +530,7 @@ func (a *Client) VirtualizationClusterTypesBulkPartialUpdate(params *Virtualizat
 		PathPattern:        "/virtualization/cluster-types/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -555,7 +555,7 @@ func (a *Client) VirtualizationClusterTypesBulkPartialUpdate(params *Virtualizat
 }
 
 /*
-  VirtualizationClusterTypesBulkUpdate virtualization cluster types bulk update API
+VirtualizationClusterTypesBulkUpdate virtualization cluster types bulk update API
 */
 func (a *Client) VirtualizationClusterTypesBulkUpdate(params *VirtualizationClusterTypesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -568,7 +568,7 @@ func (a *Client) VirtualizationClusterTypesBulkUpdate(params *VirtualizationClus
 		PathPattern:        "/virtualization/cluster-types/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -593,7 +593,7 @@ func (a *Client) VirtualizationClusterTypesBulkUpdate(params *VirtualizationClus
 }
 
 /*
-  VirtualizationClusterTypesCreate virtualization cluster types create API
+VirtualizationClusterTypesCreate virtualization cluster types create API
 */
 func (a *Client) VirtualizationClusterTypesCreate(params *VirtualizationClusterTypesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -606,7 +606,7 @@ func (a *Client) VirtualizationClusterTypesCreate(params *VirtualizationClusterT
 		PathPattern:        "/virtualization/cluster-types/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -631,7 +631,7 @@ func (a *Client) VirtualizationClusterTypesCreate(params *VirtualizationClusterT
 }
 
 /*
-  VirtualizationClusterTypesDelete virtualization cluster types delete API
+VirtualizationClusterTypesDelete virtualization cluster types delete API
 */
 func (a *Client) VirtualizationClusterTypesDelete(params *VirtualizationClusterTypesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -644,7 +644,7 @@ func (a *Client) VirtualizationClusterTypesDelete(params *VirtualizationClusterT
 		PathPattern:        "/virtualization/cluster-types/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -669,7 +669,7 @@ func (a *Client) VirtualizationClusterTypesDelete(params *VirtualizationClusterT
 }
 
 /*
-  VirtualizationClusterTypesList Overrides ListModelMixin to allow processing ExportTemplates.
+VirtualizationClusterTypesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) VirtualizationClusterTypesList(params *VirtualizationClusterTypesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesListOK, error) {
 	// TODO: Validate the params before sending
@@ -682,7 +682,7 @@ func (a *Client) VirtualizationClusterTypesList(params *VirtualizationClusterTyp
 		PathPattern:        "/virtualization/cluster-types/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -707,7 +707,7 @@ func (a *Client) VirtualizationClusterTypesList(params *VirtualizationClusterTyp
 }
 
 /*
-  VirtualizationClusterTypesPartialUpdate virtualization cluster types partial update API
+VirtualizationClusterTypesPartialUpdate virtualization cluster types partial update API
 */
 func (a *Client) VirtualizationClusterTypesPartialUpdate(params *VirtualizationClusterTypesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -720,7 +720,7 @@ func (a *Client) VirtualizationClusterTypesPartialUpdate(params *VirtualizationC
 		PathPattern:        "/virtualization/cluster-types/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -745,7 +745,7 @@ func (a *Client) VirtualizationClusterTypesPartialUpdate(params *VirtualizationC
 }
 
 /*
-  VirtualizationClusterTypesRead virtualization cluster types read API
+VirtualizationClusterTypesRead virtualization cluster types read API
 */
 func (a *Client) VirtualizationClusterTypesRead(params *VirtualizationClusterTypesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -758,7 +758,7 @@ func (a *Client) VirtualizationClusterTypesRead(params *VirtualizationClusterTyp
 		PathPattern:        "/virtualization/cluster-types/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -783,7 +783,7 @@ func (a *Client) VirtualizationClusterTypesRead(params *VirtualizationClusterTyp
 }
 
 /*
-  VirtualizationClusterTypesUpdate virtualization cluster types update API
+VirtualizationClusterTypesUpdate virtualization cluster types update API
 */
 func (a *Client) VirtualizationClusterTypesUpdate(params *VirtualizationClusterTypesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClusterTypesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -796,7 +796,7 @@ func (a *Client) VirtualizationClusterTypesUpdate(params *VirtualizationClusterT
 		PathPattern:        "/virtualization/cluster-types/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClusterTypesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -821,7 +821,7 @@ func (a *Client) VirtualizationClusterTypesUpdate(params *VirtualizationClusterT
 }
 
 /*
-  VirtualizationClustersBulkDelete virtualization clusters bulk delete API
+VirtualizationClustersBulkDelete virtualization clusters bulk delete API
 */
 func (a *Client) VirtualizationClustersBulkDelete(params *VirtualizationClustersBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -834,7 +834,7 @@ func (a *Client) VirtualizationClustersBulkDelete(params *VirtualizationClusters
 		PathPattern:        "/virtualization/clusters/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -859,7 +859,7 @@ func (a *Client) VirtualizationClustersBulkDelete(params *VirtualizationClusters
 }
 
 /*
-  VirtualizationClustersBulkPartialUpdate virtualization clusters bulk partial update API
+VirtualizationClustersBulkPartialUpdate virtualization clusters bulk partial update API
 */
 func (a *Client) VirtualizationClustersBulkPartialUpdate(params *VirtualizationClustersBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -872,7 +872,7 @@ func (a *Client) VirtualizationClustersBulkPartialUpdate(params *VirtualizationC
 		PathPattern:        "/virtualization/clusters/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -897,7 +897,7 @@ func (a *Client) VirtualizationClustersBulkPartialUpdate(params *VirtualizationC
 }
 
 /*
-  VirtualizationClustersBulkUpdate virtualization clusters bulk update API
+VirtualizationClustersBulkUpdate virtualization clusters bulk update API
 */
 func (a *Client) VirtualizationClustersBulkUpdate(params *VirtualizationClustersBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -910,7 +910,7 @@ func (a *Client) VirtualizationClustersBulkUpdate(params *VirtualizationClusters
 		PathPattern:        "/virtualization/clusters/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -935,7 +935,7 @@ func (a *Client) VirtualizationClustersBulkUpdate(params *VirtualizationClusters
 }
 
 /*
-  VirtualizationClustersCreate virtualization clusters create API
+VirtualizationClustersCreate virtualization clusters create API
 */
 func (a *Client) VirtualizationClustersCreate(params *VirtualizationClustersCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -948,7 +948,7 @@ func (a *Client) VirtualizationClustersCreate(params *VirtualizationClustersCrea
 		PathPattern:        "/virtualization/clusters/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -973,7 +973,7 @@ func (a *Client) VirtualizationClustersCreate(params *VirtualizationClustersCrea
 }
 
 /*
-  VirtualizationClustersDelete virtualization clusters delete API
+VirtualizationClustersDelete virtualization clusters delete API
 */
 func (a *Client) VirtualizationClustersDelete(params *VirtualizationClustersDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -986,7 +986,7 @@ func (a *Client) VirtualizationClustersDelete(params *VirtualizationClustersDele
 		PathPattern:        "/virtualization/clusters/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1011,7 +1011,7 @@ func (a *Client) VirtualizationClustersDelete(params *VirtualizationClustersDele
 }
 
 /*
-  VirtualizationClustersList Overrides ListModelMixin to allow processing ExportTemplates.
+VirtualizationClustersList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) VirtualizationClustersList(params *VirtualizationClustersListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersListOK, error) {
 	// TODO: Validate the params before sending
@@ -1024,7 +1024,7 @@ func (a *Client) VirtualizationClustersList(params *VirtualizationClustersListPa
 		PathPattern:        "/virtualization/clusters/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1049,7 +1049,7 @@ func (a *Client) VirtualizationClustersList(params *VirtualizationClustersListPa
 }
 
 /*
-  VirtualizationClustersPartialUpdate virtualization clusters partial update API
+VirtualizationClustersPartialUpdate virtualization clusters partial update API
 */
 func (a *Client) VirtualizationClustersPartialUpdate(params *VirtualizationClustersPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1062,7 +1062,7 @@ func (a *Client) VirtualizationClustersPartialUpdate(params *VirtualizationClust
 		PathPattern:        "/virtualization/clusters/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1087,7 +1087,7 @@ func (a *Client) VirtualizationClustersPartialUpdate(params *VirtualizationClust
 }
 
 /*
-  VirtualizationClustersRead virtualization clusters read API
+VirtualizationClustersRead virtualization clusters read API
 */
 func (a *Client) VirtualizationClustersRead(params *VirtualizationClustersReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1100,7 +1100,7 @@ func (a *Client) VirtualizationClustersRead(params *VirtualizationClustersReadPa
 		PathPattern:        "/virtualization/clusters/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1125,7 +1125,7 @@ func (a *Client) VirtualizationClustersRead(params *VirtualizationClustersReadPa
 }
 
 /*
-  VirtualizationClustersUpdate virtualization clusters update API
+VirtualizationClustersUpdate virtualization clusters update API
 */
 func (a *Client) VirtualizationClustersUpdate(params *VirtualizationClustersUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationClustersUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1138,7 +1138,7 @@ func (a *Client) VirtualizationClustersUpdate(params *VirtualizationClustersUpda
 		PathPattern:        "/virtualization/clusters/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationClustersUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1163,7 +1163,7 @@ func (a *Client) VirtualizationClustersUpdate(params *VirtualizationClustersUpda
 }
 
 /*
-  VirtualizationInterfacesBulkDelete virtualization interfaces bulk delete API
+VirtualizationInterfacesBulkDelete virtualization interfaces bulk delete API
 */
 func (a *Client) VirtualizationInterfacesBulkDelete(params *VirtualizationInterfacesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1176,7 +1176,7 @@ func (a *Client) VirtualizationInterfacesBulkDelete(params *VirtualizationInterf
 		PathPattern:        "/virtualization/interfaces/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1201,7 +1201,7 @@ func (a *Client) VirtualizationInterfacesBulkDelete(params *VirtualizationInterf
 }
 
 /*
-  VirtualizationInterfacesBulkPartialUpdate virtualization interfaces bulk partial update API
+VirtualizationInterfacesBulkPartialUpdate virtualization interfaces bulk partial update API
 */
 func (a *Client) VirtualizationInterfacesBulkPartialUpdate(params *VirtualizationInterfacesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1214,7 +1214,7 @@ func (a *Client) VirtualizationInterfacesBulkPartialUpdate(params *Virtualizatio
 		PathPattern:        "/virtualization/interfaces/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1239,7 +1239,7 @@ func (a *Client) VirtualizationInterfacesBulkPartialUpdate(params *Virtualizatio
 }
 
 /*
-  VirtualizationInterfacesBulkUpdate virtualization interfaces bulk update API
+VirtualizationInterfacesBulkUpdate virtualization interfaces bulk update API
 */
 func (a *Client) VirtualizationInterfacesBulkUpdate(params *VirtualizationInterfacesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1252,7 +1252,7 @@ func (a *Client) VirtualizationInterfacesBulkUpdate(params *VirtualizationInterf
 		PathPattern:        "/virtualization/interfaces/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1277,7 +1277,7 @@ func (a *Client) VirtualizationInterfacesBulkUpdate(params *VirtualizationInterf
 }
 
 /*
-  VirtualizationInterfacesCreate virtualization interfaces create API
+VirtualizationInterfacesCreate virtualization interfaces create API
 */
 func (a *Client) VirtualizationInterfacesCreate(params *VirtualizationInterfacesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -1290,7 +1290,7 @@ func (a *Client) VirtualizationInterfacesCreate(params *VirtualizationInterfaces
 		PathPattern:        "/virtualization/interfaces/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1315,7 +1315,7 @@ func (a *Client) VirtualizationInterfacesCreate(params *VirtualizationInterfaces
 }
 
 /*
-  VirtualizationInterfacesDelete virtualization interfaces delete API
+VirtualizationInterfacesDelete virtualization interfaces delete API
 */
 func (a *Client) VirtualizationInterfacesDelete(params *VirtualizationInterfacesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1328,7 +1328,7 @@ func (a *Client) VirtualizationInterfacesDelete(params *VirtualizationInterfaces
 		PathPattern:        "/virtualization/interfaces/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1353,7 +1353,7 @@ func (a *Client) VirtualizationInterfacesDelete(params *VirtualizationInterfaces
 }
 
 /*
-  VirtualizationInterfacesList Overrides ListModelMixin to allow processing ExportTemplates.
+VirtualizationInterfacesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) VirtualizationInterfacesList(params *VirtualizationInterfacesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesListOK, error) {
 	// TODO: Validate the params before sending
@@ -1366,7 +1366,7 @@ func (a *Client) VirtualizationInterfacesList(params *VirtualizationInterfacesLi
 		PathPattern:        "/virtualization/interfaces/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1391,7 +1391,7 @@ func (a *Client) VirtualizationInterfacesList(params *VirtualizationInterfacesLi
 }
 
 /*
-  VirtualizationInterfacesPartialUpdate virtualization interfaces partial update API
+VirtualizationInterfacesPartialUpdate virtualization interfaces partial update API
 */
 func (a *Client) VirtualizationInterfacesPartialUpdate(params *VirtualizationInterfacesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1404,7 +1404,7 @@ func (a *Client) VirtualizationInterfacesPartialUpdate(params *VirtualizationInt
 		PathPattern:        "/virtualization/interfaces/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1429,7 +1429,7 @@ func (a *Client) VirtualizationInterfacesPartialUpdate(params *VirtualizationInt
 }
 
 /*
-  VirtualizationInterfacesRead virtualization interfaces read API
+VirtualizationInterfacesRead virtualization interfaces read API
 */
 func (a *Client) VirtualizationInterfacesRead(params *VirtualizationInterfacesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1442,7 +1442,7 @@ func (a *Client) VirtualizationInterfacesRead(params *VirtualizationInterfacesRe
 		PathPattern:        "/virtualization/interfaces/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1467,7 +1467,7 @@ func (a *Client) VirtualizationInterfacesRead(params *VirtualizationInterfacesRe
 }
 
 /*
-  VirtualizationInterfacesUpdate virtualization interfaces update API
+VirtualizationInterfacesUpdate virtualization interfaces update API
 */
 func (a *Client) VirtualizationInterfacesUpdate(params *VirtualizationInterfacesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationInterfacesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1480,7 +1480,7 @@ func (a *Client) VirtualizationInterfacesUpdate(params *VirtualizationInterfaces
 		PathPattern:        "/virtualization/interfaces/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationInterfacesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1505,7 +1505,7 @@ func (a *Client) VirtualizationInterfacesUpdate(params *VirtualizationInterfaces
 }
 
 /*
-  VirtualizationVirtualMachinesBulkDelete virtualization virtual machines bulk delete API
+VirtualizationVirtualMachinesBulkDelete virtualization virtual machines bulk delete API
 */
 func (a *Client) VirtualizationVirtualMachinesBulkDelete(params *VirtualizationVirtualMachinesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1518,7 +1518,7 @@ func (a *Client) VirtualizationVirtualMachinesBulkDelete(params *VirtualizationV
 		PathPattern:        "/virtualization/virtual-machines/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1543,7 +1543,7 @@ func (a *Client) VirtualizationVirtualMachinesBulkDelete(params *VirtualizationV
 }
 
 /*
-  VirtualizationVirtualMachinesBulkPartialUpdate virtualization virtual machines bulk partial update API
+VirtualizationVirtualMachinesBulkPartialUpdate virtualization virtual machines bulk partial update API
 */
 func (a *Client) VirtualizationVirtualMachinesBulkPartialUpdate(params *VirtualizationVirtualMachinesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1556,7 +1556,7 @@ func (a *Client) VirtualizationVirtualMachinesBulkPartialUpdate(params *Virtuali
 		PathPattern:        "/virtualization/virtual-machines/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1581,7 +1581,7 @@ func (a *Client) VirtualizationVirtualMachinesBulkPartialUpdate(params *Virtuali
 }
 
 /*
-  VirtualizationVirtualMachinesBulkUpdate virtualization virtual machines bulk update API
+VirtualizationVirtualMachinesBulkUpdate virtualization virtual machines bulk update API
 */
 func (a *Client) VirtualizationVirtualMachinesBulkUpdate(params *VirtualizationVirtualMachinesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1594,7 +1594,7 @@ func (a *Client) VirtualizationVirtualMachinesBulkUpdate(params *VirtualizationV
 		PathPattern:        "/virtualization/virtual-machines/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1619,7 +1619,7 @@ func (a *Client) VirtualizationVirtualMachinesBulkUpdate(params *VirtualizationV
 }
 
 /*
-  VirtualizationVirtualMachinesCreate virtualization virtual machines create API
+VirtualizationVirtualMachinesCreate virtualization virtual machines create API
 */
 func (a *Client) VirtualizationVirtualMachinesCreate(params *VirtualizationVirtualMachinesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -1632,7 +1632,7 @@ func (a *Client) VirtualizationVirtualMachinesCreate(params *VirtualizationVirtu
 		PathPattern:        "/virtualization/virtual-machines/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1657,7 +1657,7 @@ func (a *Client) VirtualizationVirtualMachinesCreate(params *VirtualizationVirtu
 }
 
 /*
-  VirtualizationVirtualMachinesDelete virtualization virtual machines delete API
+VirtualizationVirtualMachinesDelete virtualization virtual machines delete API
 */
 func (a *Client) VirtualizationVirtualMachinesDelete(params *VirtualizationVirtualMachinesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1670,7 +1670,7 @@ func (a *Client) VirtualizationVirtualMachinesDelete(params *VirtualizationVirtu
 		PathPattern:        "/virtualization/virtual-machines/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1695,7 +1695,7 @@ func (a *Client) VirtualizationVirtualMachinesDelete(params *VirtualizationVirtu
 }
 
 /*
-  VirtualizationVirtualMachinesList Overrides ListModelMixin to allow processing ExportTemplates.
+VirtualizationVirtualMachinesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) VirtualizationVirtualMachinesList(params *VirtualizationVirtualMachinesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesListOK, error) {
 	// TODO: Validate the params before sending
@@ -1708,7 +1708,7 @@ func (a *Client) VirtualizationVirtualMachinesList(params *VirtualizationVirtual
 		PathPattern:        "/virtualization/virtual-machines/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1733,7 +1733,7 @@ func (a *Client) VirtualizationVirtualMachinesList(params *VirtualizationVirtual
 }
 
 /*
-  VirtualizationVirtualMachinesPartialUpdate virtualization virtual machines partial update API
+VirtualizationVirtualMachinesPartialUpdate virtualization virtual machines partial update API
 */
 func (a *Client) VirtualizationVirtualMachinesPartialUpdate(params *VirtualizationVirtualMachinesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1746,7 +1746,7 @@ func (a *Client) VirtualizationVirtualMachinesPartialUpdate(params *Virtualizati
 		PathPattern:        "/virtualization/virtual-machines/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1771,7 +1771,7 @@ func (a *Client) VirtualizationVirtualMachinesPartialUpdate(params *Virtualizati
 }
 
 /*
-  VirtualizationVirtualMachinesRead virtualization virtual machines read API
+VirtualizationVirtualMachinesRead virtualization virtual machines read API
 */
 func (a *Client) VirtualizationVirtualMachinesRead(params *VirtualizationVirtualMachinesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1784,7 +1784,7 @@ func (a *Client) VirtualizationVirtualMachinesRead(params *VirtualizationVirtual
 		PathPattern:        "/virtualization/virtual-machines/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1809,7 +1809,7 @@ func (a *Client) VirtualizationVirtualMachinesRead(params *VirtualizationVirtual
 }
 
 /*
-  VirtualizationVirtualMachinesUpdate virtualization virtual machines update API
+VirtualizationVirtualMachinesUpdate virtualization virtual machines update API
 */
 func (a *Client) VirtualizationVirtualMachinesUpdate(params *VirtualizationVirtualMachinesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*VirtualizationVirtualMachinesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1822,7 +1822,7 @@ func (a *Client) VirtualizationVirtualMachinesUpdate(params *VirtualizationVirtu
 		PathPattern:        "/virtualization/virtual-machines/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &VirtualizationVirtualMachinesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,

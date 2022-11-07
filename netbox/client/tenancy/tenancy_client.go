@@ -155,7 +155,7 @@ type ClientService interface {
 }
 
 /*
-  TenancyContactAssignmentsBulkDelete tenancy contact assignments bulk delete API
+TenancyContactAssignmentsBulkDelete tenancy contact assignments bulk delete API
 */
 func (a *Client) TenancyContactAssignmentsBulkDelete(params *TenancyContactAssignmentsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -168,7 +168,7 @@ func (a *Client) TenancyContactAssignmentsBulkDelete(params *TenancyContactAssig
 		PathPattern:        "/tenancy/contact-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -193,7 +193,7 @@ func (a *Client) TenancyContactAssignmentsBulkDelete(params *TenancyContactAssig
 }
 
 /*
-  TenancyContactAssignmentsBulkPartialUpdate tenancy contact assignments bulk partial update API
+TenancyContactAssignmentsBulkPartialUpdate tenancy contact assignments bulk partial update API
 */
 func (a *Client) TenancyContactAssignmentsBulkPartialUpdate(params *TenancyContactAssignmentsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -206,7 +206,7 @@ func (a *Client) TenancyContactAssignmentsBulkPartialUpdate(params *TenancyConta
 		PathPattern:        "/tenancy/contact-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -231,7 +231,7 @@ func (a *Client) TenancyContactAssignmentsBulkPartialUpdate(params *TenancyConta
 }
 
 /*
-  TenancyContactAssignmentsBulkUpdate tenancy contact assignments bulk update API
+TenancyContactAssignmentsBulkUpdate tenancy contact assignments bulk update API
 */
 func (a *Client) TenancyContactAssignmentsBulkUpdate(params *TenancyContactAssignmentsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -244,7 +244,7 @@ func (a *Client) TenancyContactAssignmentsBulkUpdate(params *TenancyContactAssig
 		PathPattern:        "/tenancy/contact-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -269,7 +269,7 @@ func (a *Client) TenancyContactAssignmentsBulkUpdate(params *TenancyContactAssig
 }
 
 /*
-  TenancyContactAssignmentsCreate tenancy contact assignments create API
+TenancyContactAssignmentsCreate tenancy contact assignments create API
 */
 func (a *Client) TenancyContactAssignmentsCreate(params *TenancyContactAssignmentsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -282,7 +282,7 @@ func (a *Client) TenancyContactAssignmentsCreate(params *TenancyContactAssignmen
 		PathPattern:        "/tenancy/contact-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -307,7 +307,7 @@ func (a *Client) TenancyContactAssignmentsCreate(params *TenancyContactAssignmen
 }
 
 /*
-  TenancyContactAssignmentsDelete tenancy contact assignments delete API
+TenancyContactAssignmentsDelete tenancy contact assignments delete API
 */
 func (a *Client) TenancyContactAssignmentsDelete(params *TenancyContactAssignmentsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -320,7 +320,7 @@ func (a *Client) TenancyContactAssignmentsDelete(params *TenancyContactAssignmen
 		PathPattern:        "/tenancy/contact-assignments/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -345,7 +345,7 @@ func (a *Client) TenancyContactAssignmentsDelete(params *TenancyContactAssignmen
 }
 
 /*
-  TenancyContactAssignmentsList Overrides ListModelMixin to allow processing ExportTemplates.
+TenancyContactAssignmentsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) TenancyContactAssignmentsList(params *TenancyContactAssignmentsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsListOK, error) {
 	// TODO: Validate the params before sending
@@ -358,7 +358,7 @@ func (a *Client) TenancyContactAssignmentsList(params *TenancyContactAssignments
 		PathPattern:        "/tenancy/contact-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -383,7 +383,7 @@ func (a *Client) TenancyContactAssignmentsList(params *TenancyContactAssignments
 }
 
 /*
-  TenancyContactAssignmentsPartialUpdate tenancy contact assignments partial update API
+TenancyContactAssignmentsPartialUpdate tenancy contact assignments partial update API
 */
 func (a *Client) TenancyContactAssignmentsPartialUpdate(params *TenancyContactAssignmentsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -396,7 +396,7 @@ func (a *Client) TenancyContactAssignmentsPartialUpdate(params *TenancyContactAs
 		PathPattern:        "/tenancy/contact-assignments/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -421,7 +421,7 @@ func (a *Client) TenancyContactAssignmentsPartialUpdate(params *TenancyContactAs
 }
 
 /*
-  TenancyContactAssignmentsRead tenancy contact assignments read API
+TenancyContactAssignmentsRead tenancy contact assignments read API
 */
 func (a *Client) TenancyContactAssignmentsRead(params *TenancyContactAssignmentsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -434,7 +434,7 @@ func (a *Client) TenancyContactAssignmentsRead(params *TenancyContactAssignments
 		PathPattern:        "/tenancy/contact-assignments/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -459,7 +459,7 @@ func (a *Client) TenancyContactAssignmentsRead(params *TenancyContactAssignments
 }
 
 /*
-  TenancyContactAssignmentsUpdate tenancy contact assignments update API
+TenancyContactAssignmentsUpdate tenancy contact assignments update API
 */
 func (a *Client) TenancyContactAssignmentsUpdate(params *TenancyContactAssignmentsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactAssignmentsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -472,7 +472,7 @@ func (a *Client) TenancyContactAssignmentsUpdate(params *TenancyContactAssignmen
 		PathPattern:        "/tenancy/contact-assignments/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactAssignmentsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -497,7 +497,7 @@ func (a *Client) TenancyContactAssignmentsUpdate(params *TenancyContactAssignmen
 }
 
 /*
-  TenancyContactGroupsBulkDelete tenancy contact groups bulk delete API
+TenancyContactGroupsBulkDelete tenancy contact groups bulk delete API
 */
 func (a *Client) TenancyContactGroupsBulkDelete(params *TenancyContactGroupsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -510,7 +510,7 @@ func (a *Client) TenancyContactGroupsBulkDelete(params *TenancyContactGroupsBulk
 		PathPattern:        "/tenancy/contact-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -535,7 +535,7 @@ func (a *Client) TenancyContactGroupsBulkDelete(params *TenancyContactGroupsBulk
 }
 
 /*
-  TenancyContactGroupsBulkPartialUpdate tenancy contact groups bulk partial update API
+TenancyContactGroupsBulkPartialUpdate tenancy contact groups bulk partial update API
 */
 func (a *Client) TenancyContactGroupsBulkPartialUpdate(params *TenancyContactGroupsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -548,7 +548,7 @@ func (a *Client) TenancyContactGroupsBulkPartialUpdate(params *TenancyContactGro
 		PathPattern:        "/tenancy/contact-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -573,7 +573,7 @@ func (a *Client) TenancyContactGroupsBulkPartialUpdate(params *TenancyContactGro
 }
 
 /*
-  TenancyContactGroupsBulkUpdate tenancy contact groups bulk update API
+TenancyContactGroupsBulkUpdate tenancy contact groups bulk update API
 */
 func (a *Client) TenancyContactGroupsBulkUpdate(params *TenancyContactGroupsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -586,7 +586,7 @@ func (a *Client) TenancyContactGroupsBulkUpdate(params *TenancyContactGroupsBulk
 		PathPattern:        "/tenancy/contact-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -611,7 +611,7 @@ func (a *Client) TenancyContactGroupsBulkUpdate(params *TenancyContactGroupsBulk
 }
 
 /*
-  TenancyContactGroupsCreate tenancy contact groups create API
+TenancyContactGroupsCreate tenancy contact groups create API
 */
 func (a *Client) TenancyContactGroupsCreate(params *TenancyContactGroupsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -624,7 +624,7 @@ func (a *Client) TenancyContactGroupsCreate(params *TenancyContactGroupsCreatePa
 		PathPattern:        "/tenancy/contact-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -649,7 +649,7 @@ func (a *Client) TenancyContactGroupsCreate(params *TenancyContactGroupsCreatePa
 }
 
 /*
-  TenancyContactGroupsDelete tenancy contact groups delete API
+TenancyContactGroupsDelete tenancy contact groups delete API
 */
 func (a *Client) TenancyContactGroupsDelete(params *TenancyContactGroupsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -662,7 +662,7 @@ func (a *Client) TenancyContactGroupsDelete(params *TenancyContactGroupsDeletePa
 		PathPattern:        "/tenancy/contact-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -687,7 +687,7 @@ func (a *Client) TenancyContactGroupsDelete(params *TenancyContactGroupsDeletePa
 }
 
 /*
-  TenancyContactGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
+TenancyContactGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) TenancyContactGroupsList(params *TenancyContactGroupsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsListOK, error) {
 	// TODO: Validate the params before sending
@@ -700,7 +700,7 @@ func (a *Client) TenancyContactGroupsList(params *TenancyContactGroupsListParams
 		PathPattern:        "/tenancy/contact-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -725,7 +725,7 @@ func (a *Client) TenancyContactGroupsList(params *TenancyContactGroupsListParams
 }
 
 /*
-  TenancyContactGroupsPartialUpdate tenancy contact groups partial update API
+TenancyContactGroupsPartialUpdate tenancy contact groups partial update API
 */
 func (a *Client) TenancyContactGroupsPartialUpdate(params *TenancyContactGroupsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -738,7 +738,7 @@ func (a *Client) TenancyContactGroupsPartialUpdate(params *TenancyContactGroupsP
 		PathPattern:        "/tenancy/contact-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -763,7 +763,7 @@ func (a *Client) TenancyContactGroupsPartialUpdate(params *TenancyContactGroupsP
 }
 
 /*
-  TenancyContactGroupsRead tenancy contact groups read API
+TenancyContactGroupsRead tenancy contact groups read API
 */
 func (a *Client) TenancyContactGroupsRead(params *TenancyContactGroupsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -776,7 +776,7 @@ func (a *Client) TenancyContactGroupsRead(params *TenancyContactGroupsReadParams
 		PathPattern:        "/tenancy/contact-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -801,7 +801,7 @@ func (a *Client) TenancyContactGroupsRead(params *TenancyContactGroupsReadParams
 }
 
 /*
-  TenancyContactGroupsUpdate tenancy contact groups update API
+TenancyContactGroupsUpdate tenancy contact groups update API
 */
 func (a *Client) TenancyContactGroupsUpdate(params *TenancyContactGroupsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactGroupsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -814,7 +814,7 @@ func (a *Client) TenancyContactGroupsUpdate(params *TenancyContactGroupsUpdatePa
 		PathPattern:        "/tenancy/contact-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactGroupsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -839,7 +839,7 @@ func (a *Client) TenancyContactGroupsUpdate(params *TenancyContactGroupsUpdatePa
 }
 
 /*
-  TenancyContactRolesBulkDelete tenancy contact roles bulk delete API
+TenancyContactRolesBulkDelete tenancy contact roles bulk delete API
 */
 func (a *Client) TenancyContactRolesBulkDelete(params *TenancyContactRolesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -852,7 +852,7 @@ func (a *Client) TenancyContactRolesBulkDelete(params *TenancyContactRolesBulkDe
 		PathPattern:        "/tenancy/contact-roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -877,7 +877,7 @@ func (a *Client) TenancyContactRolesBulkDelete(params *TenancyContactRolesBulkDe
 }
 
 /*
-  TenancyContactRolesBulkPartialUpdate tenancy contact roles bulk partial update API
+TenancyContactRolesBulkPartialUpdate tenancy contact roles bulk partial update API
 */
 func (a *Client) TenancyContactRolesBulkPartialUpdate(params *TenancyContactRolesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -890,7 +890,7 @@ func (a *Client) TenancyContactRolesBulkPartialUpdate(params *TenancyContactRole
 		PathPattern:        "/tenancy/contact-roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -915,7 +915,7 @@ func (a *Client) TenancyContactRolesBulkPartialUpdate(params *TenancyContactRole
 }
 
 /*
-  TenancyContactRolesBulkUpdate tenancy contact roles bulk update API
+TenancyContactRolesBulkUpdate tenancy contact roles bulk update API
 */
 func (a *Client) TenancyContactRolesBulkUpdate(params *TenancyContactRolesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -928,7 +928,7 @@ func (a *Client) TenancyContactRolesBulkUpdate(params *TenancyContactRolesBulkUp
 		PathPattern:        "/tenancy/contact-roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -953,7 +953,7 @@ func (a *Client) TenancyContactRolesBulkUpdate(params *TenancyContactRolesBulkUp
 }
 
 /*
-  TenancyContactRolesCreate tenancy contact roles create API
+TenancyContactRolesCreate tenancy contact roles create API
 */
 func (a *Client) TenancyContactRolesCreate(params *TenancyContactRolesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -966,7 +966,7 @@ func (a *Client) TenancyContactRolesCreate(params *TenancyContactRolesCreatePara
 		PathPattern:        "/tenancy/contact-roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -991,7 +991,7 @@ func (a *Client) TenancyContactRolesCreate(params *TenancyContactRolesCreatePara
 }
 
 /*
-  TenancyContactRolesDelete tenancy contact roles delete API
+TenancyContactRolesDelete tenancy contact roles delete API
 */
 func (a *Client) TenancyContactRolesDelete(params *TenancyContactRolesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1004,7 +1004,7 @@ func (a *Client) TenancyContactRolesDelete(params *TenancyContactRolesDeletePara
 		PathPattern:        "/tenancy/contact-roles/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1029,7 +1029,7 @@ func (a *Client) TenancyContactRolesDelete(params *TenancyContactRolesDeletePara
 }
 
 /*
-  TenancyContactRolesList Overrides ListModelMixin to allow processing ExportTemplates.
+TenancyContactRolesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) TenancyContactRolesList(params *TenancyContactRolesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesListOK, error) {
 	// TODO: Validate the params before sending
@@ -1042,7 +1042,7 @@ func (a *Client) TenancyContactRolesList(params *TenancyContactRolesListParams, 
 		PathPattern:        "/tenancy/contact-roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1067,7 +1067,7 @@ func (a *Client) TenancyContactRolesList(params *TenancyContactRolesListParams, 
 }
 
 /*
-  TenancyContactRolesPartialUpdate tenancy contact roles partial update API
+TenancyContactRolesPartialUpdate tenancy contact roles partial update API
 */
 func (a *Client) TenancyContactRolesPartialUpdate(params *TenancyContactRolesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1080,7 +1080,7 @@ func (a *Client) TenancyContactRolesPartialUpdate(params *TenancyContactRolesPar
 		PathPattern:        "/tenancy/contact-roles/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1105,7 +1105,7 @@ func (a *Client) TenancyContactRolesPartialUpdate(params *TenancyContactRolesPar
 }
 
 /*
-  TenancyContactRolesRead tenancy contact roles read API
+TenancyContactRolesRead tenancy contact roles read API
 */
 func (a *Client) TenancyContactRolesRead(params *TenancyContactRolesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1118,7 +1118,7 @@ func (a *Client) TenancyContactRolesRead(params *TenancyContactRolesReadParams, 
 		PathPattern:        "/tenancy/contact-roles/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1143,7 +1143,7 @@ func (a *Client) TenancyContactRolesRead(params *TenancyContactRolesReadParams, 
 }
 
 /*
-  TenancyContactRolesUpdate tenancy contact roles update API
+TenancyContactRolesUpdate tenancy contact roles update API
 */
 func (a *Client) TenancyContactRolesUpdate(params *TenancyContactRolesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactRolesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1156,7 +1156,7 @@ func (a *Client) TenancyContactRolesUpdate(params *TenancyContactRolesUpdatePara
 		PathPattern:        "/tenancy/contact-roles/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactRolesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1181,7 +1181,7 @@ func (a *Client) TenancyContactRolesUpdate(params *TenancyContactRolesUpdatePara
 }
 
 /*
-  TenancyContactsBulkDelete tenancy contacts bulk delete API
+TenancyContactsBulkDelete tenancy contacts bulk delete API
 */
 func (a *Client) TenancyContactsBulkDelete(params *TenancyContactsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1194,7 +1194,7 @@ func (a *Client) TenancyContactsBulkDelete(params *TenancyContactsBulkDeletePara
 		PathPattern:        "/tenancy/contacts/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1219,7 +1219,7 @@ func (a *Client) TenancyContactsBulkDelete(params *TenancyContactsBulkDeletePara
 }
 
 /*
-  TenancyContactsBulkPartialUpdate tenancy contacts bulk partial update API
+TenancyContactsBulkPartialUpdate tenancy contacts bulk partial update API
 */
 func (a *Client) TenancyContactsBulkPartialUpdate(params *TenancyContactsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1232,7 +1232,7 @@ func (a *Client) TenancyContactsBulkPartialUpdate(params *TenancyContactsBulkPar
 		PathPattern:        "/tenancy/contacts/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1257,7 +1257,7 @@ func (a *Client) TenancyContactsBulkPartialUpdate(params *TenancyContactsBulkPar
 }
 
 /*
-  TenancyContactsBulkUpdate tenancy contacts bulk update API
+TenancyContactsBulkUpdate tenancy contacts bulk update API
 */
 func (a *Client) TenancyContactsBulkUpdate(params *TenancyContactsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1270,7 +1270,7 @@ func (a *Client) TenancyContactsBulkUpdate(params *TenancyContactsBulkUpdatePara
 		PathPattern:        "/tenancy/contacts/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1295,7 +1295,7 @@ func (a *Client) TenancyContactsBulkUpdate(params *TenancyContactsBulkUpdatePara
 }
 
 /*
-  TenancyContactsCreate tenancy contacts create API
+TenancyContactsCreate tenancy contacts create API
 */
 func (a *Client) TenancyContactsCreate(params *TenancyContactsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -1308,7 +1308,7 @@ func (a *Client) TenancyContactsCreate(params *TenancyContactsCreateParams, auth
 		PathPattern:        "/tenancy/contacts/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1333,7 +1333,7 @@ func (a *Client) TenancyContactsCreate(params *TenancyContactsCreateParams, auth
 }
 
 /*
-  TenancyContactsDelete tenancy contacts delete API
+TenancyContactsDelete tenancy contacts delete API
 */
 func (a *Client) TenancyContactsDelete(params *TenancyContactsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1346,7 +1346,7 @@ func (a *Client) TenancyContactsDelete(params *TenancyContactsDeleteParams, auth
 		PathPattern:        "/tenancy/contacts/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1371,7 +1371,7 @@ func (a *Client) TenancyContactsDelete(params *TenancyContactsDeleteParams, auth
 }
 
 /*
-  TenancyContactsList Overrides ListModelMixin to allow processing ExportTemplates.
+TenancyContactsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) TenancyContactsList(params *TenancyContactsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsListOK, error) {
 	// TODO: Validate the params before sending
@@ -1384,7 +1384,7 @@ func (a *Client) TenancyContactsList(params *TenancyContactsListParams, authInfo
 		PathPattern:        "/tenancy/contacts/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1409,7 +1409,7 @@ func (a *Client) TenancyContactsList(params *TenancyContactsListParams, authInfo
 }
 
 /*
-  TenancyContactsPartialUpdate tenancy contacts partial update API
+TenancyContactsPartialUpdate tenancy contacts partial update API
 */
 func (a *Client) TenancyContactsPartialUpdate(params *TenancyContactsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1422,7 +1422,7 @@ func (a *Client) TenancyContactsPartialUpdate(params *TenancyContactsPartialUpda
 		PathPattern:        "/tenancy/contacts/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1447,7 +1447,7 @@ func (a *Client) TenancyContactsPartialUpdate(params *TenancyContactsPartialUpda
 }
 
 /*
-  TenancyContactsRead tenancy contacts read API
+TenancyContactsRead tenancy contacts read API
 */
 func (a *Client) TenancyContactsRead(params *TenancyContactsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1460,7 +1460,7 @@ func (a *Client) TenancyContactsRead(params *TenancyContactsReadParams, authInfo
 		PathPattern:        "/tenancy/contacts/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1485,7 +1485,7 @@ func (a *Client) TenancyContactsRead(params *TenancyContactsReadParams, authInfo
 }
 
 /*
-  TenancyContactsUpdate tenancy contacts update API
+TenancyContactsUpdate tenancy contacts update API
 */
 func (a *Client) TenancyContactsUpdate(params *TenancyContactsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyContactsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1498,7 +1498,7 @@ func (a *Client) TenancyContactsUpdate(params *TenancyContactsUpdateParams, auth
 		PathPattern:        "/tenancy/contacts/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyContactsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1523,7 +1523,7 @@ func (a *Client) TenancyContactsUpdate(params *TenancyContactsUpdateParams, auth
 }
 
 /*
-  TenancyTenantGroupsBulkDelete tenancy tenant groups bulk delete API
+TenancyTenantGroupsBulkDelete tenancy tenant groups bulk delete API
 */
 func (a *Client) TenancyTenantGroupsBulkDelete(params *TenancyTenantGroupsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1536,7 +1536,7 @@ func (a *Client) TenancyTenantGroupsBulkDelete(params *TenancyTenantGroupsBulkDe
 		PathPattern:        "/tenancy/tenant-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1561,7 +1561,7 @@ func (a *Client) TenancyTenantGroupsBulkDelete(params *TenancyTenantGroupsBulkDe
 }
 
 /*
-  TenancyTenantGroupsBulkPartialUpdate tenancy tenant groups bulk partial update API
+TenancyTenantGroupsBulkPartialUpdate tenancy tenant groups bulk partial update API
 */
 func (a *Client) TenancyTenantGroupsBulkPartialUpdate(params *TenancyTenantGroupsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1574,7 +1574,7 @@ func (a *Client) TenancyTenantGroupsBulkPartialUpdate(params *TenancyTenantGroup
 		PathPattern:        "/tenancy/tenant-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1599,7 +1599,7 @@ func (a *Client) TenancyTenantGroupsBulkPartialUpdate(params *TenancyTenantGroup
 }
 
 /*
-  TenancyTenantGroupsBulkUpdate tenancy tenant groups bulk update API
+TenancyTenantGroupsBulkUpdate tenancy tenant groups bulk update API
 */
 func (a *Client) TenancyTenantGroupsBulkUpdate(params *TenancyTenantGroupsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1612,7 +1612,7 @@ func (a *Client) TenancyTenantGroupsBulkUpdate(params *TenancyTenantGroupsBulkUp
 		PathPattern:        "/tenancy/tenant-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1637,7 +1637,7 @@ func (a *Client) TenancyTenantGroupsBulkUpdate(params *TenancyTenantGroupsBulkUp
 }
 
 /*
-  TenancyTenantGroupsCreate tenancy tenant groups create API
+TenancyTenantGroupsCreate tenancy tenant groups create API
 */
 func (a *Client) TenancyTenantGroupsCreate(params *TenancyTenantGroupsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -1650,7 +1650,7 @@ func (a *Client) TenancyTenantGroupsCreate(params *TenancyTenantGroupsCreatePara
 		PathPattern:        "/tenancy/tenant-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1675,7 +1675,7 @@ func (a *Client) TenancyTenantGroupsCreate(params *TenancyTenantGroupsCreatePara
 }
 
 /*
-  TenancyTenantGroupsDelete tenancy tenant groups delete API
+TenancyTenantGroupsDelete tenancy tenant groups delete API
 */
 func (a *Client) TenancyTenantGroupsDelete(params *TenancyTenantGroupsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1688,7 +1688,7 @@ func (a *Client) TenancyTenantGroupsDelete(params *TenancyTenantGroupsDeletePara
 		PathPattern:        "/tenancy/tenant-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1713,7 +1713,7 @@ func (a *Client) TenancyTenantGroupsDelete(params *TenancyTenantGroupsDeletePara
 }
 
 /*
-  TenancyTenantGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
+TenancyTenantGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) TenancyTenantGroupsList(params *TenancyTenantGroupsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsListOK, error) {
 	// TODO: Validate the params before sending
@@ -1726,7 +1726,7 @@ func (a *Client) TenancyTenantGroupsList(params *TenancyTenantGroupsListParams, 
 		PathPattern:        "/tenancy/tenant-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1751,7 +1751,7 @@ func (a *Client) TenancyTenantGroupsList(params *TenancyTenantGroupsListParams, 
 }
 
 /*
-  TenancyTenantGroupsPartialUpdate tenancy tenant groups partial update API
+TenancyTenantGroupsPartialUpdate tenancy tenant groups partial update API
 */
 func (a *Client) TenancyTenantGroupsPartialUpdate(params *TenancyTenantGroupsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1764,7 +1764,7 @@ func (a *Client) TenancyTenantGroupsPartialUpdate(params *TenancyTenantGroupsPar
 		PathPattern:        "/tenancy/tenant-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1789,7 +1789,7 @@ func (a *Client) TenancyTenantGroupsPartialUpdate(params *TenancyTenantGroupsPar
 }
 
 /*
-  TenancyTenantGroupsRead tenancy tenant groups read API
+TenancyTenantGroupsRead tenancy tenant groups read API
 */
 func (a *Client) TenancyTenantGroupsRead(params *TenancyTenantGroupsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1802,7 +1802,7 @@ func (a *Client) TenancyTenantGroupsRead(params *TenancyTenantGroupsReadParams, 
 		PathPattern:        "/tenancy/tenant-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1827,7 +1827,7 @@ func (a *Client) TenancyTenantGroupsRead(params *TenancyTenantGroupsReadParams, 
 }
 
 /*
-  TenancyTenantGroupsUpdate tenancy tenant groups update API
+TenancyTenantGroupsUpdate tenancy tenant groups update API
 */
 func (a *Client) TenancyTenantGroupsUpdate(params *TenancyTenantGroupsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantGroupsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1840,7 +1840,7 @@ func (a *Client) TenancyTenantGroupsUpdate(params *TenancyTenantGroupsUpdatePara
 		PathPattern:        "/tenancy/tenant-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantGroupsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1865,7 +1865,7 @@ func (a *Client) TenancyTenantGroupsUpdate(params *TenancyTenantGroupsUpdatePara
 }
 
 /*
-  TenancyTenantsBulkDelete tenancy tenants bulk delete API
+TenancyTenantsBulkDelete tenancy tenants bulk delete API
 */
 func (a *Client) TenancyTenantsBulkDelete(params *TenancyTenantsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1878,7 +1878,7 @@ func (a *Client) TenancyTenantsBulkDelete(params *TenancyTenantsBulkDeleteParams
 		PathPattern:        "/tenancy/tenants/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1903,7 +1903,7 @@ func (a *Client) TenancyTenantsBulkDelete(params *TenancyTenantsBulkDeleteParams
 }
 
 /*
-  TenancyTenantsBulkPartialUpdate tenancy tenants bulk partial update API
+TenancyTenantsBulkPartialUpdate tenancy tenants bulk partial update API
 */
 func (a *Client) TenancyTenantsBulkPartialUpdate(params *TenancyTenantsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1916,7 +1916,7 @@ func (a *Client) TenancyTenantsBulkPartialUpdate(params *TenancyTenantsBulkParti
 		PathPattern:        "/tenancy/tenants/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1941,7 +1941,7 @@ func (a *Client) TenancyTenantsBulkPartialUpdate(params *TenancyTenantsBulkParti
 }
 
 /*
-  TenancyTenantsBulkUpdate tenancy tenants bulk update API
+TenancyTenantsBulkUpdate tenancy tenants bulk update API
 */
 func (a *Client) TenancyTenantsBulkUpdate(params *TenancyTenantsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1954,7 +1954,7 @@ func (a *Client) TenancyTenantsBulkUpdate(params *TenancyTenantsBulkUpdateParams
 		PathPattern:        "/tenancy/tenants/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1979,7 +1979,7 @@ func (a *Client) TenancyTenantsBulkUpdate(params *TenancyTenantsBulkUpdateParams
 }
 
 /*
-  TenancyTenantsCreate tenancy tenants create API
+TenancyTenantsCreate tenancy tenants create API
 */
 func (a *Client) TenancyTenantsCreate(params *TenancyTenantsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -1992,7 +1992,7 @@ func (a *Client) TenancyTenantsCreate(params *TenancyTenantsCreateParams, authIn
 		PathPattern:        "/tenancy/tenants/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2017,7 +2017,7 @@ func (a *Client) TenancyTenantsCreate(params *TenancyTenantsCreateParams, authIn
 }
 
 /*
-  TenancyTenantsDelete tenancy tenants delete API
+TenancyTenantsDelete tenancy tenants delete API
 */
 func (a *Client) TenancyTenantsDelete(params *TenancyTenantsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2030,7 +2030,7 @@ func (a *Client) TenancyTenantsDelete(params *TenancyTenantsDeleteParams, authIn
 		PathPattern:        "/tenancy/tenants/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2055,7 +2055,7 @@ func (a *Client) TenancyTenantsDelete(params *TenancyTenantsDeleteParams, authIn
 }
 
 /*
-  TenancyTenantsList Overrides ListModelMixin to allow processing ExportTemplates.
+TenancyTenantsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) TenancyTenantsList(params *TenancyTenantsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsListOK, error) {
 	// TODO: Validate the params before sending
@@ -2068,7 +2068,7 @@ func (a *Client) TenancyTenantsList(params *TenancyTenantsListParams, authInfo r
 		PathPattern:        "/tenancy/tenants/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2093,7 +2093,7 @@ func (a *Client) TenancyTenantsList(params *TenancyTenantsListParams, authInfo r
 }
 
 /*
-  TenancyTenantsPartialUpdate tenancy tenants partial update API
+TenancyTenantsPartialUpdate tenancy tenants partial update API
 */
 func (a *Client) TenancyTenantsPartialUpdate(params *TenancyTenantsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2106,7 +2106,7 @@ func (a *Client) TenancyTenantsPartialUpdate(params *TenancyTenantsPartialUpdate
 		PathPattern:        "/tenancy/tenants/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2131,7 +2131,7 @@ func (a *Client) TenancyTenantsPartialUpdate(params *TenancyTenantsPartialUpdate
 }
 
 /*
-  TenancyTenantsRead tenancy tenants read API
+TenancyTenantsRead tenancy tenants read API
 */
 func (a *Client) TenancyTenantsRead(params *TenancyTenantsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -2144,7 +2144,7 @@ func (a *Client) TenancyTenantsRead(params *TenancyTenantsReadParams, authInfo r
 		PathPattern:        "/tenancy/tenants/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2169,7 +2169,7 @@ func (a *Client) TenancyTenantsRead(params *TenancyTenantsReadParams, authInfo r
 }
 
 /*
-  TenancyTenantsUpdate tenancy tenants update API
+TenancyTenantsUpdate tenancy tenants update API
 */
 func (a *Client) TenancyTenantsUpdate(params *TenancyTenantsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TenancyTenantsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2182,7 +2182,7 @@ func (a *Client) TenancyTenantsUpdate(params *TenancyTenantsUpdateParams, authIn
 		PathPattern:        "/tenancy/tenants/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &TenancyTenantsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,

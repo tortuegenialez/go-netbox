@@ -155,6 +155,42 @@ type ClientService interface {
 
 	IpamIPRangesUpdate(params *IpamIPRangesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesUpdateOK, error)
 
+	IpamL2vpnTerminationsBulkDelete(params *IpamL2vpnTerminationsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsBulkDeleteNoContent, error)
+
+	IpamL2vpnTerminationsBulkPartialUpdate(params *IpamL2vpnTerminationsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsBulkPartialUpdateOK, error)
+
+	IpamL2vpnTerminationsBulkUpdate(params *IpamL2vpnTerminationsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsBulkUpdateOK, error)
+
+	IpamL2vpnTerminationsCreate(params *IpamL2vpnTerminationsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsCreateCreated, error)
+
+	IpamL2vpnTerminationsDelete(params *IpamL2vpnTerminationsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsDeleteNoContent, error)
+
+	IpamL2vpnTerminationsList(params *IpamL2vpnTerminationsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsListOK, error)
+
+	IpamL2vpnTerminationsPartialUpdate(params *IpamL2vpnTerminationsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsPartialUpdateOK, error)
+
+	IpamL2vpnTerminationsRead(params *IpamL2vpnTerminationsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsReadOK, error)
+
+	IpamL2vpnTerminationsUpdate(params *IpamL2vpnTerminationsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsUpdateOK, error)
+
+	IpamL2vpnsBulkDelete(params *IpamL2vpnsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsBulkDeleteNoContent, error)
+
+	IpamL2vpnsBulkPartialUpdate(params *IpamL2vpnsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsBulkPartialUpdateOK, error)
+
+	IpamL2vpnsBulkUpdate(params *IpamL2vpnsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsBulkUpdateOK, error)
+
+	IpamL2vpnsCreate(params *IpamL2vpnsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsCreateCreated, error)
+
+	IpamL2vpnsDelete(params *IpamL2vpnsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsDeleteNoContent, error)
+
+	IpamL2vpnsList(params *IpamL2vpnsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsListOK, error)
+
+	IpamL2vpnsPartialUpdate(params *IpamL2vpnsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsPartialUpdateOK, error)
+
+	IpamL2vpnsRead(params *IpamL2vpnsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsReadOK, error)
+
+	IpamL2vpnsUpdate(params *IpamL2vpnsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsUpdateOK, error)
+
 	IpamPrefixesAvailableIpsCreate(params *IpamPrefixesAvailableIpsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesAvailableIpsCreateCreated, error)
 
 	IpamPrefixesAvailableIpsList(params *IpamPrefixesAvailableIpsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesAvailableIpsListOK, error)
@@ -333,7 +369,7 @@ type ClientService interface {
 }
 
 /*
-  IpamAggregatesBulkDelete ipam aggregates bulk delete API
+IpamAggregatesBulkDelete ipam aggregates bulk delete API
 */
 func (a *Client) IpamAggregatesBulkDelete(params *IpamAggregatesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -346,7 +382,7 @@ func (a *Client) IpamAggregatesBulkDelete(params *IpamAggregatesBulkDeleteParams
 		PathPattern:        "/ipam/aggregates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -371,7 +407,7 @@ func (a *Client) IpamAggregatesBulkDelete(params *IpamAggregatesBulkDeleteParams
 }
 
 /*
-  IpamAggregatesBulkPartialUpdate ipam aggregates bulk partial update API
+IpamAggregatesBulkPartialUpdate ipam aggregates bulk partial update API
 */
 func (a *Client) IpamAggregatesBulkPartialUpdate(params *IpamAggregatesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -384,7 +420,7 @@ func (a *Client) IpamAggregatesBulkPartialUpdate(params *IpamAggregatesBulkParti
 		PathPattern:        "/ipam/aggregates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -409,7 +445,7 @@ func (a *Client) IpamAggregatesBulkPartialUpdate(params *IpamAggregatesBulkParti
 }
 
 /*
-  IpamAggregatesBulkUpdate ipam aggregates bulk update API
+IpamAggregatesBulkUpdate ipam aggregates bulk update API
 */
 func (a *Client) IpamAggregatesBulkUpdate(params *IpamAggregatesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -422,7 +458,7 @@ func (a *Client) IpamAggregatesBulkUpdate(params *IpamAggregatesBulkUpdateParams
 		PathPattern:        "/ipam/aggregates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -447,7 +483,7 @@ func (a *Client) IpamAggregatesBulkUpdate(params *IpamAggregatesBulkUpdateParams
 }
 
 /*
-  IpamAggregatesCreate ipam aggregates create API
+IpamAggregatesCreate ipam aggregates create API
 */
 func (a *Client) IpamAggregatesCreate(params *IpamAggregatesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -460,7 +496,7 @@ func (a *Client) IpamAggregatesCreate(params *IpamAggregatesCreateParams, authIn
 		PathPattern:        "/ipam/aggregates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -485,7 +521,7 @@ func (a *Client) IpamAggregatesCreate(params *IpamAggregatesCreateParams, authIn
 }
 
 /*
-  IpamAggregatesDelete ipam aggregates delete API
+IpamAggregatesDelete ipam aggregates delete API
 */
 func (a *Client) IpamAggregatesDelete(params *IpamAggregatesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -498,7 +534,7 @@ func (a *Client) IpamAggregatesDelete(params *IpamAggregatesDeleteParams, authIn
 		PathPattern:        "/ipam/aggregates/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -523,7 +559,7 @@ func (a *Client) IpamAggregatesDelete(params *IpamAggregatesDeleteParams, authIn
 }
 
 /*
-  IpamAggregatesList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamAggregatesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamAggregatesList(params *IpamAggregatesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesListOK, error) {
 	// TODO: Validate the params before sending
@@ -536,7 +572,7 @@ func (a *Client) IpamAggregatesList(params *IpamAggregatesListParams, authInfo r
 		PathPattern:        "/ipam/aggregates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -561,7 +597,7 @@ func (a *Client) IpamAggregatesList(params *IpamAggregatesListParams, authInfo r
 }
 
 /*
-  IpamAggregatesPartialUpdate ipam aggregates partial update API
+IpamAggregatesPartialUpdate ipam aggregates partial update API
 */
 func (a *Client) IpamAggregatesPartialUpdate(params *IpamAggregatesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -574,7 +610,7 @@ func (a *Client) IpamAggregatesPartialUpdate(params *IpamAggregatesPartialUpdate
 		PathPattern:        "/ipam/aggregates/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -599,7 +635,7 @@ func (a *Client) IpamAggregatesPartialUpdate(params *IpamAggregatesPartialUpdate
 }
 
 /*
-  IpamAggregatesRead ipam aggregates read API
+IpamAggregatesRead ipam aggregates read API
 */
 func (a *Client) IpamAggregatesRead(params *IpamAggregatesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -612,7 +648,7 @@ func (a *Client) IpamAggregatesRead(params *IpamAggregatesReadParams, authInfo r
 		PathPattern:        "/ipam/aggregates/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -637,7 +673,7 @@ func (a *Client) IpamAggregatesRead(params *IpamAggregatesReadParams, authInfo r
 }
 
 /*
-  IpamAggregatesUpdate ipam aggregates update API
+IpamAggregatesUpdate ipam aggregates update API
 */
 func (a *Client) IpamAggregatesUpdate(params *IpamAggregatesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAggregatesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -650,7 +686,7 @@ func (a *Client) IpamAggregatesUpdate(params *IpamAggregatesUpdateParams, authIn
 		PathPattern:        "/ipam/aggregates/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAggregatesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -675,7 +711,7 @@ func (a *Client) IpamAggregatesUpdate(params *IpamAggregatesUpdateParams, authIn
 }
 
 /*
-  IpamAsnsBulkDelete ipam asns bulk delete API
+IpamAsnsBulkDelete ipam asns bulk delete API
 */
 func (a *Client) IpamAsnsBulkDelete(params *IpamAsnsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -688,7 +724,7 @@ func (a *Client) IpamAsnsBulkDelete(params *IpamAsnsBulkDeleteParams, authInfo r
 		PathPattern:        "/ipam/asns/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -713,7 +749,7 @@ func (a *Client) IpamAsnsBulkDelete(params *IpamAsnsBulkDeleteParams, authInfo r
 }
 
 /*
-  IpamAsnsBulkPartialUpdate ipam asns bulk partial update API
+IpamAsnsBulkPartialUpdate ipam asns bulk partial update API
 */
 func (a *Client) IpamAsnsBulkPartialUpdate(params *IpamAsnsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -726,7 +762,7 @@ func (a *Client) IpamAsnsBulkPartialUpdate(params *IpamAsnsBulkPartialUpdatePara
 		PathPattern:        "/ipam/asns/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -751,7 +787,7 @@ func (a *Client) IpamAsnsBulkPartialUpdate(params *IpamAsnsBulkPartialUpdatePara
 }
 
 /*
-  IpamAsnsBulkUpdate ipam asns bulk update API
+IpamAsnsBulkUpdate ipam asns bulk update API
 */
 func (a *Client) IpamAsnsBulkUpdate(params *IpamAsnsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -764,7 +800,7 @@ func (a *Client) IpamAsnsBulkUpdate(params *IpamAsnsBulkUpdateParams, authInfo r
 		PathPattern:        "/ipam/asns/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -789,7 +825,7 @@ func (a *Client) IpamAsnsBulkUpdate(params *IpamAsnsBulkUpdateParams, authInfo r
 }
 
 /*
-  IpamAsnsCreate ipam asns create API
+IpamAsnsCreate ipam asns create API
 */
 func (a *Client) IpamAsnsCreate(params *IpamAsnsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -802,7 +838,7 @@ func (a *Client) IpamAsnsCreate(params *IpamAsnsCreateParams, authInfo runtime.C
 		PathPattern:        "/ipam/asns/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -827,7 +863,7 @@ func (a *Client) IpamAsnsCreate(params *IpamAsnsCreateParams, authInfo runtime.C
 }
 
 /*
-  IpamAsnsDelete ipam asns delete API
+IpamAsnsDelete ipam asns delete API
 */
 func (a *Client) IpamAsnsDelete(params *IpamAsnsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -840,7 +876,7 @@ func (a *Client) IpamAsnsDelete(params *IpamAsnsDeleteParams, authInfo runtime.C
 		PathPattern:        "/ipam/asns/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -865,7 +901,7 @@ func (a *Client) IpamAsnsDelete(params *IpamAsnsDeleteParams, authInfo runtime.C
 }
 
 /*
-  IpamAsnsList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamAsnsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamAsnsList(params *IpamAsnsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsListOK, error) {
 	// TODO: Validate the params before sending
@@ -878,7 +914,7 @@ func (a *Client) IpamAsnsList(params *IpamAsnsListParams, authInfo runtime.Clien
 		PathPattern:        "/ipam/asns/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -903,7 +939,7 @@ func (a *Client) IpamAsnsList(params *IpamAsnsListParams, authInfo runtime.Clien
 }
 
 /*
-  IpamAsnsPartialUpdate ipam asns partial update API
+IpamAsnsPartialUpdate ipam asns partial update API
 */
 func (a *Client) IpamAsnsPartialUpdate(params *IpamAsnsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -916,7 +952,7 @@ func (a *Client) IpamAsnsPartialUpdate(params *IpamAsnsPartialUpdateParams, auth
 		PathPattern:        "/ipam/asns/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -941,7 +977,7 @@ func (a *Client) IpamAsnsPartialUpdate(params *IpamAsnsPartialUpdateParams, auth
 }
 
 /*
-  IpamAsnsRead ipam asns read API
+IpamAsnsRead ipam asns read API
 */
 func (a *Client) IpamAsnsRead(params *IpamAsnsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -954,7 +990,7 @@ func (a *Client) IpamAsnsRead(params *IpamAsnsReadParams, authInfo runtime.Clien
 		PathPattern:        "/ipam/asns/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -979,7 +1015,7 @@ func (a *Client) IpamAsnsRead(params *IpamAsnsReadParams, authInfo runtime.Clien
 }
 
 /*
-  IpamAsnsUpdate ipam asns update API
+IpamAsnsUpdate ipam asns update API
 */
 func (a *Client) IpamAsnsUpdate(params *IpamAsnsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamAsnsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -992,7 +1028,7 @@ func (a *Client) IpamAsnsUpdate(params *IpamAsnsUpdateParams, authInfo runtime.C
 		PathPattern:        "/ipam/asns/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamAsnsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1017,7 +1053,7 @@ func (a *Client) IpamAsnsUpdate(params *IpamAsnsUpdateParams, authInfo runtime.C
 }
 
 /*
-  IpamFhrpGroupAssignmentsBulkDelete ipam fhrp group assignments bulk delete API
+IpamFhrpGroupAssignmentsBulkDelete ipam fhrp group assignments bulk delete API
 */
 func (a *Client) IpamFhrpGroupAssignmentsBulkDelete(params *IpamFhrpGroupAssignmentsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1030,7 +1066,7 @@ func (a *Client) IpamFhrpGroupAssignmentsBulkDelete(params *IpamFhrpGroupAssignm
 		PathPattern:        "/ipam/fhrp-group-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1055,7 +1091,7 @@ func (a *Client) IpamFhrpGroupAssignmentsBulkDelete(params *IpamFhrpGroupAssignm
 }
 
 /*
-  IpamFhrpGroupAssignmentsBulkPartialUpdate ipam fhrp group assignments bulk partial update API
+IpamFhrpGroupAssignmentsBulkPartialUpdate ipam fhrp group assignments bulk partial update API
 */
 func (a *Client) IpamFhrpGroupAssignmentsBulkPartialUpdate(params *IpamFhrpGroupAssignmentsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1068,7 +1104,7 @@ func (a *Client) IpamFhrpGroupAssignmentsBulkPartialUpdate(params *IpamFhrpGroup
 		PathPattern:        "/ipam/fhrp-group-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1093,7 +1129,7 @@ func (a *Client) IpamFhrpGroupAssignmentsBulkPartialUpdate(params *IpamFhrpGroup
 }
 
 /*
-  IpamFhrpGroupAssignmentsBulkUpdate ipam fhrp group assignments bulk update API
+IpamFhrpGroupAssignmentsBulkUpdate ipam fhrp group assignments bulk update API
 */
 func (a *Client) IpamFhrpGroupAssignmentsBulkUpdate(params *IpamFhrpGroupAssignmentsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1106,7 +1142,7 @@ func (a *Client) IpamFhrpGroupAssignmentsBulkUpdate(params *IpamFhrpGroupAssignm
 		PathPattern:        "/ipam/fhrp-group-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1131,7 +1167,7 @@ func (a *Client) IpamFhrpGroupAssignmentsBulkUpdate(params *IpamFhrpGroupAssignm
 }
 
 /*
-  IpamFhrpGroupAssignmentsCreate ipam fhrp group assignments create API
+IpamFhrpGroupAssignmentsCreate ipam fhrp group assignments create API
 */
 func (a *Client) IpamFhrpGroupAssignmentsCreate(params *IpamFhrpGroupAssignmentsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -1144,7 +1180,7 @@ func (a *Client) IpamFhrpGroupAssignmentsCreate(params *IpamFhrpGroupAssignments
 		PathPattern:        "/ipam/fhrp-group-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1169,7 +1205,7 @@ func (a *Client) IpamFhrpGroupAssignmentsCreate(params *IpamFhrpGroupAssignments
 }
 
 /*
-  IpamFhrpGroupAssignmentsDelete ipam fhrp group assignments delete API
+IpamFhrpGroupAssignmentsDelete ipam fhrp group assignments delete API
 */
 func (a *Client) IpamFhrpGroupAssignmentsDelete(params *IpamFhrpGroupAssignmentsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1182,7 +1218,7 @@ func (a *Client) IpamFhrpGroupAssignmentsDelete(params *IpamFhrpGroupAssignments
 		PathPattern:        "/ipam/fhrp-group-assignments/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1207,7 +1243,7 @@ func (a *Client) IpamFhrpGroupAssignmentsDelete(params *IpamFhrpGroupAssignments
 }
 
 /*
-  IpamFhrpGroupAssignmentsList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamFhrpGroupAssignmentsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamFhrpGroupAssignmentsList(params *IpamFhrpGroupAssignmentsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsListOK, error) {
 	// TODO: Validate the params before sending
@@ -1220,7 +1256,7 @@ func (a *Client) IpamFhrpGroupAssignmentsList(params *IpamFhrpGroupAssignmentsLi
 		PathPattern:        "/ipam/fhrp-group-assignments/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1245,7 +1281,7 @@ func (a *Client) IpamFhrpGroupAssignmentsList(params *IpamFhrpGroupAssignmentsLi
 }
 
 /*
-  IpamFhrpGroupAssignmentsPartialUpdate ipam fhrp group assignments partial update API
+IpamFhrpGroupAssignmentsPartialUpdate ipam fhrp group assignments partial update API
 */
 func (a *Client) IpamFhrpGroupAssignmentsPartialUpdate(params *IpamFhrpGroupAssignmentsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1258,7 +1294,7 @@ func (a *Client) IpamFhrpGroupAssignmentsPartialUpdate(params *IpamFhrpGroupAssi
 		PathPattern:        "/ipam/fhrp-group-assignments/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1283,7 +1319,7 @@ func (a *Client) IpamFhrpGroupAssignmentsPartialUpdate(params *IpamFhrpGroupAssi
 }
 
 /*
-  IpamFhrpGroupAssignmentsRead ipam fhrp group assignments read API
+IpamFhrpGroupAssignmentsRead ipam fhrp group assignments read API
 */
 func (a *Client) IpamFhrpGroupAssignmentsRead(params *IpamFhrpGroupAssignmentsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1296,7 +1332,7 @@ func (a *Client) IpamFhrpGroupAssignmentsRead(params *IpamFhrpGroupAssignmentsRe
 		PathPattern:        "/ipam/fhrp-group-assignments/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1321,7 +1357,7 @@ func (a *Client) IpamFhrpGroupAssignmentsRead(params *IpamFhrpGroupAssignmentsRe
 }
 
 /*
-  IpamFhrpGroupAssignmentsUpdate ipam fhrp group assignments update API
+IpamFhrpGroupAssignmentsUpdate ipam fhrp group assignments update API
 */
 func (a *Client) IpamFhrpGroupAssignmentsUpdate(params *IpamFhrpGroupAssignmentsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupAssignmentsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1334,7 +1370,7 @@ func (a *Client) IpamFhrpGroupAssignmentsUpdate(params *IpamFhrpGroupAssignments
 		PathPattern:        "/ipam/fhrp-group-assignments/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupAssignmentsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1359,7 +1395,7 @@ func (a *Client) IpamFhrpGroupAssignmentsUpdate(params *IpamFhrpGroupAssignments
 }
 
 /*
-  IpamFhrpGroupsBulkDelete ipam fhrp groups bulk delete API
+IpamFhrpGroupsBulkDelete ipam fhrp groups bulk delete API
 */
 func (a *Client) IpamFhrpGroupsBulkDelete(params *IpamFhrpGroupsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1372,7 +1408,7 @@ func (a *Client) IpamFhrpGroupsBulkDelete(params *IpamFhrpGroupsBulkDeleteParams
 		PathPattern:        "/ipam/fhrp-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1397,7 +1433,7 @@ func (a *Client) IpamFhrpGroupsBulkDelete(params *IpamFhrpGroupsBulkDeleteParams
 }
 
 /*
-  IpamFhrpGroupsBulkPartialUpdate ipam fhrp groups bulk partial update API
+IpamFhrpGroupsBulkPartialUpdate ipam fhrp groups bulk partial update API
 */
 func (a *Client) IpamFhrpGroupsBulkPartialUpdate(params *IpamFhrpGroupsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1410,7 +1446,7 @@ func (a *Client) IpamFhrpGroupsBulkPartialUpdate(params *IpamFhrpGroupsBulkParti
 		PathPattern:        "/ipam/fhrp-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1435,7 +1471,7 @@ func (a *Client) IpamFhrpGroupsBulkPartialUpdate(params *IpamFhrpGroupsBulkParti
 }
 
 /*
-  IpamFhrpGroupsBulkUpdate ipam fhrp groups bulk update API
+IpamFhrpGroupsBulkUpdate ipam fhrp groups bulk update API
 */
 func (a *Client) IpamFhrpGroupsBulkUpdate(params *IpamFhrpGroupsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1448,7 +1484,7 @@ func (a *Client) IpamFhrpGroupsBulkUpdate(params *IpamFhrpGroupsBulkUpdateParams
 		PathPattern:        "/ipam/fhrp-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1473,7 +1509,7 @@ func (a *Client) IpamFhrpGroupsBulkUpdate(params *IpamFhrpGroupsBulkUpdateParams
 }
 
 /*
-  IpamFhrpGroupsCreate ipam fhrp groups create API
+IpamFhrpGroupsCreate ipam fhrp groups create API
 */
 func (a *Client) IpamFhrpGroupsCreate(params *IpamFhrpGroupsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -1486,7 +1522,7 @@ func (a *Client) IpamFhrpGroupsCreate(params *IpamFhrpGroupsCreateParams, authIn
 		PathPattern:        "/ipam/fhrp-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1511,7 +1547,7 @@ func (a *Client) IpamFhrpGroupsCreate(params *IpamFhrpGroupsCreateParams, authIn
 }
 
 /*
-  IpamFhrpGroupsDelete ipam fhrp groups delete API
+IpamFhrpGroupsDelete ipam fhrp groups delete API
 */
 func (a *Client) IpamFhrpGroupsDelete(params *IpamFhrpGroupsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1524,7 +1560,7 @@ func (a *Client) IpamFhrpGroupsDelete(params *IpamFhrpGroupsDeleteParams, authIn
 		PathPattern:        "/ipam/fhrp-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1549,7 +1585,7 @@ func (a *Client) IpamFhrpGroupsDelete(params *IpamFhrpGroupsDeleteParams, authIn
 }
 
 /*
-  IpamFhrpGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamFhrpGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamFhrpGroupsList(params *IpamFhrpGroupsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsListOK, error) {
 	// TODO: Validate the params before sending
@@ -1562,7 +1598,7 @@ func (a *Client) IpamFhrpGroupsList(params *IpamFhrpGroupsListParams, authInfo r
 		PathPattern:        "/ipam/fhrp-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1587,7 +1623,7 @@ func (a *Client) IpamFhrpGroupsList(params *IpamFhrpGroupsListParams, authInfo r
 }
 
 /*
-  IpamFhrpGroupsPartialUpdate ipam fhrp groups partial update API
+IpamFhrpGroupsPartialUpdate ipam fhrp groups partial update API
 */
 func (a *Client) IpamFhrpGroupsPartialUpdate(params *IpamFhrpGroupsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1600,7 +1636,7 @@ func (a *Client) IpamFhrpGroupsPartialUpdate(params *IpamFhrpGroupsPartialUpdate
 		PathPattern:        "/ipam/fhrp-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1625,7 +1661,7 @@ func (a *Client) IpamFhrpGroupsPartialUpdate(params *IpamFhrpGroupsPartialUpdate
 }
 
 /*
-  IpamFhrpGroupsRead ipam fhrp groups read API
+IpamFhrpGroupsRead ipam fhrp groups read API
 */
 func (a *Client) IpamFhrpGroupsRead(params *IpamFhrpGroupsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1638,7 +1674,7 @@ func (a *Client) IpamFhrpGroupsRead(params *IpamFhrpGroupsReadParams, authInfo r
 		PathPattern:        "/ipam/fhrp-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1663,7 +1699,7 @@ func (a *Client) IpamFhrpGroupsRead(params *IpamFhrpGroupsReadParams, authInfo r
 }
 
 /*
-  IpamFhrpGroupsUpdate ipam fhrp groups update API
+IpamFhrpGroupsUpdate ipam fhrp groups update API
 */
 func (a *Client) IpamFhrpGroupsUpdate(params *IpamFhrpGroupsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamFhrpGroupsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1676,7 +1712,7 @@ func (a *Client) IpamFhrpGroupsUpdate(params *IpamFhrpGroupsUpdateParams, authIn
 		PathPattern:        "/ipam/fhrp-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamFhrpGroupsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1701,7 +1737,7 @@ func (a *Client) IpamFhrpGroupsUpdate(params *IpamFhrpGroupsUpdateParams, authIn
 }
 
 /*
-  IpamIPAddressesBulkDelete ipam ip addresses bulk delete API
+IpamIPAddressesBulkDelete ipam ip addresses bulk delete API
 */
 func (a *Client) IpamIPAddressesBulkDelete(params *IpamIPAddressesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1714,7 +1750,7 @@ func (a *Client) IpamIPAddressesBulkDelete(params *IpamIPAddressesBulkDeletePara
 		PathPattern:        "/ipam/ip-addresses/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1739,7 +1775,7 @@ func (a *Client) IpamIPAddressesBulkDelete(params *IpamIPAddressesBulkDeletePara
 }
 
 /*
-  IpamIPAddressesBulkPartialUpdate ipam ip addresses bulk partial update API
+IpamIPAddressesBulkPartialUpdate ipam ip addresses bulk partial update API
 */
 func (a *Client) IpamIPAddressesBulkPartialUpdate(params *IpamIPAddressesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1752,7 +1788,7 @@ func (a *Client) IpamIPAddressesBulkPartialUpdate(params *IpamIPAddressesBulkPar
 		PathPattern:        "/ipam/ip-addresses/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1777,7 +1813,7 @@ func (a *Client) IpamIPAddressesBulkPartialUpdate(params *IpamIPAddressesBulkPar
 }
 
 /*
-  IpamIPAddressesBulkUpdate ipam ip addresses bulk update API
+IpamIPAddressesBulkUpdate ipam ip addresses bulk update API
 */
 func (a *Client) IpamIPAddressesBulkUpdate(params *IpamIPAddressesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1790,7 +1826,7 @@ func (a *Client) IpamIPAddressesBulkUpdate(params *IpamIPAddressesBulkUpdatePara
 		PathPattern:        "/ipam/ip-addresses/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1815,7 +1851,7 @@ func (a *Client) IpamIPAddressesBulkUpdate(params *IpamIPAddressesBulkUpdatePara
 }
 
 /*
-  IpamIPAddressesCreate ipam ip addresses create API
+IpamIPAddressesCreate ipam ip addresses create API
 */
 func (a *Client) IpamIPAddressesCreate(params *IpamIPAddressesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -1828,7 +1864,7 @@ func (a *Client) IpamIPAddressesCreate(params *IpamIPAddressesCreateParams, auth
 		PathPattern:        "/ipam/ip-addresses/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1853,7 +1889,7 @@ func (a *Client) IpamIPAddressesCreate(params *IpamIPAddressesCreateParams, auth
 }
 
 /*
-  IpamIPAddressesDelete ipam ip addresses delete API
+IpamIPAddressesDelete ipam ip addresses delete API
 */
 func (a *Client) IpamIPAddressesDelete(params *IpamIPAddressesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1866,7 +1902,7 @@ func (a *Client) IpamIPAddressesDelete(params *IpamIPAddressesDeleteParams, auth
 		PathPattern:        "/ipam/ip-addresses/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1891,7 +1927,7 @@ func (a *Client) IpamIPAddressesDelete(params *IpamIPAddressesDeleteParams, auth
 }
 
 /*
-  IpamIPAddressesList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamIPAddressesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamIPAddressesList(params *IpamIPAddressesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesListOK, error) {
 	// TODO: Validate the params before sending
@@ -1904,7 +1940,7 @@ func (a *Client) IpamIPAddressesList(params *IpamIPAddressesListParams, authInfo
 		PathPattern:        "/ipam/ip-addresses/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1929,7 +1965,7 @@ func (a *Client) IpamIPAddressesList(params *IpamIPAddressesListParams, authInfo
 }
 
 /*
-  IpamIPAddressesPartialUpdate ipam ip addresses partial update API
+IpamIPAddressesPartialUpdate ipam ip addresses partial update API
 */
 func (a *Client) IpamIPAddressesPartialUpdate(params *IpamIPAddressesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1942,7 +1978,7 @@ func (a *Client) IpamIPAddressesPartialUpdate(params *IpamIPAddressesPartialUpda
 		PathPattern:        "/ipam/ip-addresses/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1967,7 +2003,7 @@ func (a *Client) IpamIPAddressesPartialUpdate(params *IpamIPAddressesPartialUpda
 }
 
 /*
-  IpamIPAddressesRead ipam ip addresses read API
+IpamIPAddressesRead ipam ip addresses read API
 */
 func (a *Client) IpamIPAddressesRead(params *IpamIPAddressesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1980,7 +2016,7 @@ func (a *Client) IpamIPAddressesRead(params *IpamIPAddressesReadParams, authInfo
 		PathPattern:        "/ipam/ip-addresses/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2005,7 +2041,7 @@ func (a *Client) IpamIPAddressesRead(params *IpamIPAddressesReadParams, authInfo
 }
 
 /*
-  IpamIPAddressesUpdate ipam ip addresses update API
+IpamIPAddressesUpdate ipam ip addresses update API
 */
 func (a *Client) IpamIPAddressesUpdate(params *IpamIPAddressesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPAddressesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2018,7 +2054,7 @@ func (a *Client) IpamIPAddressesUpdate(params *IpamIPAddressesUpdateParams, auth
 		PathPattern:        "/ipam/ip-addresses/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPAddressesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2043,7 +2079,7 @@ func (a *Client) IpamIPAddressesUpdate(params *IpamIPAddressesUpdateParams, auth
 }
 
 /*
-  IpamIPRangesAvailableIpsCreate ipam ip ranges available ips create API
+IpamIPRangesAvailableIpsCreate ipam ip ranges available ips create API
 */
 func (a *Client) IpamIPRangesAvailableIpsCreate(params *IpamIPRangesAvailableIpsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesAvailableIpsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -2056,7 +2092,7 @@ func (a *Client) IpamIPRangesAvailableIpsCreate(params *IpamIPRangesAvailableIps
 		PathPattern:        "/ipam/ip-ranges/{id}/available-ips/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesAvailableIpsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2081,7 +2117,7 @@ func (a *Client) IpamIPRangesAvailableIpsCreate(params *IpamIPRangesAvailableIps
 }
 
 /*
-  IpamIPRangesAvailableIpsList ipam ip ranges available ips list API
+IpamIPRangesAvailableIpsList ipam ip ranges available ips list API
 */
 func (a *Client) IpamIPRangesAvailableIpsList(params *IpamIPRangesAvailableIpsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesAvailableIpsListOK, error) {
 	// TODO: Validate the params before sending
@@ -2094,7 +2130,7 @@ func (a *Client) IpamIPRangesAvailableIpsList(params *IpamIPRangesAvailableIpsLi
 		PathPattern:        "/ipam/ip-ranges/{id}/available-ips/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesAvailableIpsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2119,7 +2155,7 @@ func (a *Client) IpamIPRangesAvailableIpsList(params *IpamIPRangesAvailableIpsLi
 }
 
 /*
-  IpamIPRangesBulkDelete ipam ip ranges bulk delete API
+IpamIPRangesBulkDelete ipam ip ranges bulk delete API
 */
 func (a *Client) IpamIPRangesBulkDelete(params *IpamIPRangesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2132,7 +2168,7 @@ func (a *Client) IpamIPRangesBulkDelete(params *IpamIPRangesBulkDeleteParams, au
 		PathPattern:        "/ipam/ip-ranges/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2157,7 +2193,7 @@ func (a *Client) IpamIPRangesBulkDelete(params *IpamIPRangesBulkDeleteParams, au
 }
 
 /*
-  IpamIPRangesBulkPartialUpdate ipam ip ranges bulk partial update API
+IpamIPRangesBulkPartialUpdate ipam ip ranges bulk partial update API
 */
 func (a *Client) IpamIPRangesBulkPartialUpdate(params *IpamIPRangesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2170,7 +2206,7 @@ func (a *Client) IpamIPRangesBulkPartialUpdate(params *IpamIPRangesBulkPartialUp
 		PathPattern:        "/ipam/ip-ranges/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2195,7 +2231,7 @@ func (a *Client) IpamIPRangesBulkPartialUpdate(params *IpamIPRangesBulkPartialUp
 }
 
 /*
-  IpamIPRangesBulkUpdate ipam ip ranges bulk update API
+IpamIPRangesBulkUpdate ipam ip ranges bulk update API
 */
 func (a *Client) IpamIPRangesBulkUpdate(params *IpamIPRangesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2208,7 +2244,7 @@ func (a *Client) IpamIPRangesBulkUpdate(params *IpamIPRangesBulkUpdateParams, au
 		PathPattern:        "/ipam/ip-ranges/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2233,7 +2269,7 @@ func (a *Client) IpamIPRangesBulkUpdate(params *IpamIPRangesBulkUpdateParams, au
 }
 
 /*
-  IpamIPRangesCreate ipam ip ranges create API
+IpamIPRangesCreate ipam ip ranges create API
 */
 func (a *Client) IpamIPRangesCreate(params *IpamIPRangesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -2246,7 +2282,7 @@ func (a *Client) IpamIPRangesCreate(params *IpamIPRangesCreateParams, authInfo r
 		PathPattern:        "/ipam/ip-ranges/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2271,7 +2307,7 @@ func (a *Client) IpamIPRangesCreate(params *IpamIPRangesCreateParams, authInfo r
 }
 
 /*
-  IpamIPRangesDelete ipam ip ranges delete API
+IpamIPRangesDelete ipam ip ranges delete API
 */
 func (a *Client) IpamIPRangesDelete(params *IpamIPRangesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2284,7 +2320,7 @@ func (a *Client) IpamIPRangesDelete(params *IpamIPRangesDeleteParams, authInfo r
 		PathPattern:        "/ipam/ip-ranges/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2309,7 +2345,7 @@ func (a *Client) IpamIPRangesDelete(params *IpamIPRangesDeleteParams, authInfo r
 }
 
 /*
-  IpamIPRangesList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamIPRangesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamIPRangesList(params *IpamIPRangesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesListOK, error) {
 	// TODO: Validate the params before sending
@@ -2322,7 +2358,7 @@ func (a *Client) IpamIPRangesList(params *IpamIPRangesListParams, authInfo runti
 		PathPattern:        "/ipam/ip-ranges/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2347,7 +2383,7 @@ func (a *Client) IpamIPRangesList(params *IpamIPRangesListParams, authInfo runti
 }
 
 /*
-  IpamIPRangesPartialUpdate ipam ip ranges partial update API
+IpamIPRangesPartialUpdate ipam ip ranges partial update API
 */
 func (a *Client) IpamIPRangesPartialUpdate(params *IpamIPRangesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2360,7 +2396,7 @@ func (a *Client) IpamIPRangesPartialUpdate(params *IpamIPRangesPartialUpdatePara
 		PathPattern:        "/ipam/ip-ranges/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2385,7 +2421,7 @@ func (a *Client) IpamIPRangesPartialUpdate(params *IpamIPRangesPartialUpdatePara
 }
 
 /*
-  IpamIPRangesRead ipam ip ranges read API
+IpamIPRangesRead ipam ip ranges read API
 */
 func (a *Client) IpamIPRangesRead(params *IpamIPRangesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -2398,7 +2434,7 @@ func (a *Client) IpamIPRangesRead(params *IpamIPRangesReadParams, authInfo runti
 		PathPattern:        "/ipam/ip-ranges/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2423,7 +2459,7 @@ func (a *Client) IpamIPRangesRead(params *IpamIPRangesReadParams, authInfo runti
 }
 
 /*
-  IpamIPRangesUpdate ipam ip ranges update API
+IpamIPRangesUpdate ipam ip ranges update API
 */
 func (a *Client) IpamIPRangesUpdate(params *IpamIPRangesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamIPRangesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2436,7 +2472,7 @@ func (a *Client) IpamIPRangesUpdate(params *IpamIPRangesUpdateParams, authInfo r
 		PathPattern:        "/ipam/ip-ranges/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamIPRangesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2461,7 +2497,691 @@ func (a *Client) IpamIPRangesUpdate(params *IpamIPRangesUpdateParams, authInfo r
 }
 
 /*
-  IpamPrefixesAvailableIpsCreate ipam prefixes available ips create API
+IpamL2vpnTerminationsBulkDelete ipam l2vpn terminations bulk delete API
+*/
+func (a *Client) IpamL2vpnTerminationsBulkDelete(params *IpamL2vpnTerminationsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsBulkDeleteNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsBulkDeleteParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_bulk_delete",
+		Method:             "DELETE",
+		PathPattern:        "/ipam/l2vpn-terminations/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsBulkDeleteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsBulkDeleteNoContent)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsBulkDeleteDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnTerminationsBulkPartialUpdate ipam l2vpn terminations bulk partial update API
+*/
+func (a *Client) IpamL2vpnTerminationsBulkPartialUpdate(params *IpamL2vpnTerminationsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsBulkPartialUpdateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsBulkPartialUpdateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_bulk_partial_update",
+		Method:             "PATCH",
+		PathPattern:        "/ipam/l2vpn-terminations/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsBulkPartialUpdateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsBulkPartialUpdateOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsBulkPartialUpdateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnTerminationsBulkUpdate ipam l2vpn terminations bulk update API
+*/
+func (a *Client) IpamL2vpnTerminationsBulkUpdate(params *IpamL2vpnTerminationsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsBulkUpdateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsBulkUpdateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_bulk_update",
+		Method:             "PUT",
+		PathPattern:        "/ipam/l2vpn-terminations/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsBulkUpdateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsBulkUpdateOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsBulkUpdateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnTerminationsCreate ipam l2vpn terminations create API
+*/
+func (a *Client) IpamL2vpnTerminationsCreate(params *IpamL2vpnTerminationsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsCreateCreated, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsCreateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_create",
+		Method:             "POST",
+		PathPattern:        "/ipam/l2vpn-terminations/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsCreateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsCreateCreated)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsCreateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnTerminationsDelete ipam l2vpn terminations delete API
+*/
+func (a *Client) IpamL2vpnTerminationsDelete(params *IpamL2vpnTerminationsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsDeleteNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsDeleteParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_delete",
+		Method:             "DELETE",
+		PathPattern:        "/ipam/l2vpn-terminations/{id}/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsDeleteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsDeleteNoContent)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsDeleteDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnTerminationsList Overrides ListModelMixin to allow processing ExportTemplates.
+*/
+func (a *Client) IpamL2vpnTerminationsList(params *IpamL2vpnTerminationsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsListOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsListParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_list",
+		Method:             "GET",
+		PathPattern:        "/ipam/l2vpn-terminations/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsListReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsListOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsListDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnTerminationsPartialUpdate ipam l2vpn terminations partial update API
+*/
+func (a *Client) IpamL2vpnTerminationsPartialUpdate(params *IpamL2vpnTerminationsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsPartialUpdateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsPartialUpdateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_partial_update",
+		Method:             "PATCH",
+		PathPattern:        "/ipam/l2vpn-terminations/{id}/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsPartialUpdateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsPartialUpdateOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsPartialUpdateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnTerminationsRead ipam l2vpn terminations read API
+*/
+func (a *Client) IpamL2vpnTerminationsRead(params *IpamL2vpnTerminationsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsReadOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsReadParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_read",
+		Method:             "GET",
+		PathPattern:        "/ipam/l2vpn-terminations/{id}/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsReadReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsReadOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsReadDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnTerminationsUpdate ipam l2vpn terminations update API
+*/
+func (a *Client) IpamL2vpnTerminationsUpdate(params *IpamL2vpnTerminationsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnTerminationsUpdateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnTerminationsUpdateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpn-terminations_update",
+		Method:             "PUT",
+		PathPattern:        "/ipam/l2vpn-terminations/{id}/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnTerminationsUpdateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnTerminationsUpdateOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnTerminationsUpdateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsBulkDelete ipam l2vpns bulk delete API
+*/
+func (a *Client) IpamL2vpnsBulkDelete(params *IpamL2vpnsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsBulkDeleteNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsBulkDeleteParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_bulk_delete",
+		Method:             "DELETE",
+		PathPattern:        "/ipam/l2vpns/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsBulkDeleteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsBulkDeleteNoContent)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsBulkDeleteDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsBulkPartialUpdate ipam l2vpns bulk partial update API
+*/
+func (a *Client) IpamL2vpnsBulkPartialUpdate(params *IpamL2vpnsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsBulkPartialUpdateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsBulkPartialUpdateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_bulk_partial_update",
+		Method:             "PATCH",
+		PathPattern:        "/ipam/l2vpns/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsBulkPartialUpdateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsBulkPartialUpdateOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsBulkPartialUpdateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsBulkUpdate ipam l2vpns bulk update API
+*/
+func (a *Client) IpamL2vpnsBulkUpdate(params *IpamL2vpnsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsBulkUpdateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsBulkUpdateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_bulk_update",
+		Method:             "PUT",
+		PathPattern:        "/ipam/l2vpns/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsBulkUpdateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsBulkUpdateOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsBulkUpdateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsCreate ipam l2vpns create API
+*/
+func (a *Client) IpamL2vpnsCreate(params *IpamL2vpnsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsCreateCreated, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsCreateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_create",
+		Method:             "POST",
+		PathPattern:        "/ipam/l2vpns/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsCreateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsCreateCreated)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsCreateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsDelete ipam l2vpns delete API
+*/
+func (a *Client) IpamL2vpnsDelete(params *IpamL2vpnsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsDeleteNoContent, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsDeleteParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_delete",
+		Method:             "DELETE",
+		PathPattern:        "/ipam/l2vpns/{id}/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsDeleteReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsDeleteNoContent)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsDeleteDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsList Overrides ListModelMixin to allow processing ExportTemplates.
+*/
+func (a *Client) IpamL2vpnsList(params *IpamL2vpnsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsListOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsListParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_list",
+		Method:             "GET",
+		PathPattern:        "/ipam/l2vpns/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsListReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsListOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsListDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsPartialUpdate ipam l2vpns partial update API
+*/
+func (a *Client) IpamL2vpnsPartialUpdate(params *IpamL2vpnsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsPartialUpdateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsPartialUpdateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_partial_update",
+		Method:             "PATCH",
+		PathPattern:        "/ipam/l2vpns/{id}/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsPartialUpdateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsPartialUpdateOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsPartialUpdateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsRead ipam l2vpns read API
+*/
+func (a *Client) IpamL2vpnsRead(params *IpamL2vpnsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsReadOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsReadParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_read",
+		Method:             "GET",
+		PathPattern:        "/ipam/l2vpns/{id}/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsReadReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsReadOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsReadDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamL2vpnsUpdate ipam l2vpns update API
+*/
+func (a *Client) IpamL2vpnsUpdate(params *IpamL2vpnsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamL2vpnsUpdateOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewIpamL2vpnsUpdateParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "ipam_l2vpns_update",
+		Method:             "PUT",
+		PathPattern:        "/ipam/l2vpns/{id}/",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http"},
+		Params:             params,
+		Reader:             &IpamL2vpnsUpdateReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*IpamL2vpnsUpdateOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*IpamL2vpnsUpdateDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+IpamPrefixesAvailableIpsCreate ipam prefixes available ips create API
 */
 func (a *Client) IpamPrefixesAvailableIpsCreate(params *IpamPrefixesAvailableIpsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesAvailableIpsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -2474,7 +3194,7 @@ func (a *Client) IpamPrefixesAvailableIpsCreate(params *IpamPrefixesAvailableIps
 		PathPattern:        "/ipam/prefixes/{id}/available-ips/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesAvailableIpsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2499,7 +3219,7 @@ func (a *Client) IpamPrefixesAvailableIpsCreate(params *IpamPrefixesAvailableIps
 }
 
 /*
-  IpamPrefixesAvailableIpsList ipam prefixes available ips list API
+IpamPrefixesAvailableIpsList ipam prefixes available ips list API
 */
 func (a *Client) IpamPrefixesAvailableIpsList(params *IpamPrefixesAvailableIpsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesAvailableIpsListOK, error) {
 	// TODO: Validate the params before sending
@@ -2512,7 +3232,7 @@ func (a *Client) IpamPrefixesAvailableIpsList(params *IpamPrefixesAvailableIpsLi
 		PathPattern:        "/ipam/prefixes/{id}/available-ips/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesAvailableIpsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2537,7 +3257,7 @@ func (a *Client) IpamPrefixesAvailableIpsList(params *IpamPrefixesAvailableIpsLi
 }
 
 /*
-  IpamPrefixesAvailablePrefixesCreate ipam prefixes available prefixes create API
+IpamPrefixesAvailablePrefixesCreate ipam prefixes available prefixes create API
 */
 func (a *Client) IpamPrefixesAvailablePrefixesCreate(params *IpamPrefixesAvailablePrefixesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesAvailablePrefixesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -2550,7 +3270,7 @@ func (a *Client) IpamPrefixesAvailablePrefixesCreate(params *IpamPrefixesAvailab
 		PathPattern:        "/ipam/prefixes/{id}/available-prefixes/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesAvailablePrefixesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2575,7 +3295,7 @@ func (a *Client) IpamPrefixesAvailablePrefixesCreate(params *IpamPrefixesAvailab
 }
 
 /*
-  IpamPrefixesAvailablePrefixesList ipam prefixes available prefixes list API
+IpamPrefixesAvailablePrefixesList ipam prefixes available prefixes list API
 */
 func (a *Client) IpamPrefixesAvailablePrefixesList(params *IpamPrefixesAvailablePrefixesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesAvailablePrefixesListOK, error) {
 	// TODO: Validate the params before sending
@@ -2588,7 +3308,7 @@ func (a *Client) IpamPrefixesAvailablePrefixesList(params *IpamPrefixesAvailable
 		PathPattern:        "/ipam/prefixes/{id}/available-prefixes/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesAvailablePrefixesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2613,7 +3333,7 @@ func (a *Client) IpamPrefixesAvailablePrefixesList(params *IpamPrefixesAvailable
 }
 
 /*
-  IpamPrefixesBulkDelete ipam prefixes bulk delete API
+IpamPrefixesBulkDelete ipam prefixes bulk delete API
 */
 func (a *Client) IpamPrefixesBulkDelete(params *IpamPrefixesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2626,7 +3346,7 @@ func (a *Client) IpamPrefixesBulkDelete(params *IpamPrefixesBulkDeleteParams, au
 		PathPattern:        "/ipam/prefixes/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2651,7 +3371,7 @@ func (a *Client) IpamPrefixesBulkDelete(params *IpamPrefixesBulkDeleteParams, au
 }
 
 /*
-  IpamPrefixesBulkPartialUpdate ipam prefixes bulk partial update API
+IpamPrefixesBulkPartialUpdate ipam prefixes bulk partial update API
 */
 func (a *Client) IpamPrefixesBulkPartialUpdate(params *IpamPrefixesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2664,7 +3384,7 @@ func (a *Client) IpamPrefixesBulkPartialUpdate(params *IpamPrefixesBulkPartialUp
 		PathPattern:        "/ipam/prefixes/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2689,7 +3409,7 @@ func (a *Client) IpamPrefixesBulkPartialUpdate(params *IpamPrefixesBulkPartialUp
 }
 
 /*
-  IpamPrefixesBulkUpdate ipam prefixes bulk update API
+IpamPrefixesBulkUpdate ipam prefixes bulk update API
 */
 func (a *Client) IpamPrefixesBulkUpdate(params *IpamPrefixesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2702,7 +3422,7 @@ func (a *Client) IpamPrefixesBulkUpdate(params *IpamPrefixesBulkUpdateParams, au
 		PathPattern:        "/ipam/prefixes/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2727,7 +3447,7 @@ func (a *Client) IpamPrefixesBulkUpdate(params *IpamPrefixesBulkUpdateParams, au
 }
 
 /*
-  IpamPrefixesCreate ipam prefixes create API
+IpamPrefixesCreate ipam prefixes create API
 */
 func (a *Client) IpamPrefixesCreate(params *IpamPrefixesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -2740,7 +3460,7 @@ func (a *Client) IpamPrefixesCreate(params *IpamPrefixesCreateParams, authInfo r
 		PathPattern:        "/ipam/prefixes/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2765,7 +3485,7 @@ func (a *Client) IpamPrefixesCreate(params *IpamPrefixesCreateParams, authInfo r
 }
 
 /*
-  IpamPrefixesDelete ipam prefixes delete API
+IpamPrefixesDelete ipam prefixes delete API
 */
 func (a *Client) IpamPrefixesDelete(params *IpamPrefixesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2778,7 +3498,7 @@ func (a *Client) IpamPrefixesDelete(params *IpamPrefixesDeleteParams, authInfo r
 		PathPattern:        "/ipam/prefixes/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2803,7 +3523,7 @@ func (a *Client) IpamPrefixesDelete(params *IpamPrefixesDeleteParams, authInfo r
 }
 
 /*
-  IpamPrefixesList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamPrefixesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamPrefixesList(params *IpamPrefixesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesListOK, error) {
 	// TODO: Validate the params before sending
@@ -2816,7 +3536,7 @@ func (a *Client) IpamPrefixesList(params *IpamPrefixesListParams, authInfo runti
 		PathPattern:        "/ipam/prefixes/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2841,7 +3561,7 @@ func (a *Client) IpamPrefixesList(params *IpamPrefixesListParams, authInfo runti
 }
 
 /*
-  IpamPrefixesPartialUpdate ipam prefixes partial update API
+IpamPrefixesPartialUpdate ipam prefixes partial update API
 */
 func (a *Client) IpamPrefixesPartialUpdate(params *IpamPrefixesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2854,7 +3574,7 @@ func (a *Client) IpamPrefixesPartialUpdate(params *IpamPrefixesPartialUpdatePara
 		PathPattern:        "/ipam/prefixes/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2879,7 +3599,7 @@ func (a *Client) IpamPrefixesPartialUpdate(params *IpamPrefixesPartialUpdatePara
 }
 
 /*
-  IpamPrefixesRead ipam prefixes read API
+IpamPrefixesRead ipam prefixes read API
 */
 func (a *Client) IpamPrefixesRead(params *IpamPrefixesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -2892,7 +3612,7 @@ func (a *Client) IpamPrefixesRead(params *IpamPrefixesReadParams, authInfo runti
 		PathPattern:        "/ipam/prefixes/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2917,7 +3637,7 @@ func (a *Client) IpamPrefixesRead(params *IpamPrefixesReadParams, authInfo runti
 }
 
 /*
-  IpamPrefixesUpdate ipam prefixes update API
+IpamPrefixesUpdate ipam prefixes update API
 */
 func (a *Client) IpamPrefixesUpdate(params *IpamPrefixesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamPrefixesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -2930,7 +3650,7 @@ func (a *Client) IpamPrefixesUpdate(params *IpamPrefixesUpdateParams, authInfo r
 		PathPattern:        "/ipam/prefixes/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamPrefixesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2955,7 +3675,7 @@ func (a *Client) IpamPrefixesUpdate(params *IpamPrefixesUpdateParams, authInfo r
 }
 
 /*
-  IpamRirsBulkDelete ipam rirs bulk delete API
+IpamRirsBulkDelete ipam rirs bulk delete API
 */
 func (a *Client) IpamRirsBulkDelete(params *IpamRirsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -2968,7 +3688,7 @@ func (a *Client) IpamRirsBulkDelete(params *IpamRirsBulkDeleteParams, authInfo r
 		PathPattern:        "/ipam/rirs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -2993,7 +3713,7 @@ func (a *Client) IpamRirsBulkDelete(params *IpamRirsBulkDeleteParams, authInfo r
 }
 
 /*
-  IpamRirsBulkPartialUpdate ipam rirs bulk partial update API
+IpamRirsBulkPartialUpdate ipam rirs bulk partial update API
 */
 func (a *Client) IpamRirsBulkPartialUpdate(params *IpamRirsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3006,7 +3726,7 @@ func (a *Client) IpamRirsBulkPartialUpdate(params *IpamRirsBulkPartialUpdatePara
 		PathPattern:        "/ipam/rirs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3031,7 +3751,7 @@ func (a *Client) IpamRirsBulkPartialUpdate(params *IpamRirsBulkPartialUpdatePara
 }
 
 /*
-  IpamRirsBulkUpdate ipam rirs bulk update API
+IpamRirsBulkUpdate ipam rirs bulk update API
 */
 func (a *Client) IpamRirsBulkUpdate(params *IpamRirsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3044,7 +3764,7 @@ func (a *Client) IpamRirsBulkUpdate(params *IpamRirsBulkUpdateParams, authInfo r
 		PathPattern:        "/ipam/rirs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3069,7 +3789,7 @@ func (a *Client) IpamRirsBulkUpdate(params *IpamRirsBulkUpdateParams, authInfo r
 }
 
 /*
-  IpamRirsCreate ipam rirs create API
+IpamRirsCreate ipam rirs create API
 */
 func (a *Client) IpamRirsCreate(params *IpamRirsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -3082,7 +3802,7 @@ func (a *Client) IpamRirsCreate(params *IpamRirsCreateParams, authInfo runtime.C
 		PathPattern:        "/ipam/rirs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3107,7 +3827,7 @@ func (a *Client) IpamRirsCreate(params *IpamRirsCreateParams, authInfo runtime.C
 }
 
 /*
-  IpamRirsDelete ipam rirs delete API
+IpamRirsDelete ipam rirs delete API
 */
 func (a *Client) IpamRirsDelete(params *IpamRirsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -3120,7 +3840,7 @@ func (a *Client) IpamRirsDelete(params *IpamRirsDeleteParams, authInfo runtime.C
 		PathPattern:        "/ipam/rirs/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3145,7 +3865,7 @@ func (a *Client) IpamRirsDelete(params *IpamRirsDeleteParams, authInfo runtime.C
 }
 
 /*
-  IpamRirsList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamRirsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamRirsList(params *IpamRirsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsListOK, error) {
 	// TODO: Validate the params before sending
@@ -3158,7 +3878,7 @@ func (a *Client) IpamRirsList(params *IpamRirsListParams, authInfo runtime.Clien
 		PathPattern:        "/ipam/rirs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3183,7 +3903,7 @@ func (a *Client) IpamRirsList(params *IpamRirsListParams, authInfo runtime.Clien
 }
 
 /*
-  IpamRirsPartialUpdate ipam rirs partial update API
+IpamRirsPartialUpdate ipam rirs partial update API
 */
 func (a *Client) IpamRirsPartialUpdate(params *IpamRirsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3196,7 +3916,7 @@ func (a *Client) IpamRirsPartialUpdate(params *IpamRirsPartialUpdateParams, auth
 		PathPattern:        "/ipam/rirs/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3221,7 +3941,7 @@ func (a *Client) IpamRirsPartialUpdate(params *IpamRirsPartialUpdateParams, auth
 }
 
 /*
-  IpamRirsRead ipam rirs read API
+IpamRirsRead ipam rirs read API
 */
 func (a *Client) IpamRirsRead(params *IpamRirsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -3234,7 +3954,7 @@ func (a *Client) IpamRirsRead(params *IpamRirsReadParams, authInfo runtime.Clien
 		PathPattern:        "/ipam/rirs/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3259,7 +3979,7 @@ func (a *Client) IpamRirsRead(params *IpamRirsReadParams, authInfo runtime.Clien
 }
 
 /*
-  IpamRirsUpdate ipam rirs update API
+IpamRirsUpdate ipam rirs update API
 */
 func (a *Client) IpamRirsUpdate(params *IpamRirsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRirsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3272,7 +3992,7 @@ func (a *Client) IpamRirsUpdate(params *IpamRirsUpdateParams, authInfo runtime.C
 		PathPattern:        "/ipam/rirs/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRirsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3297,7 +4017,7 @@ func (a *Client) IpamRirsUpdate(params *IpamRirsUpdateParams, authInfo runtime.C
 }
 
 /*
-  IpamRolesBulkDelete ipam roles bulk delete API
+IpamRolesBulkDelete ipam roles bulk delete API
 */
 func (a *Client) IpamRolesBulkDelete(params *IpamRolesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -3310,7 +4030,7 @@ func (a *Client) IpamRolesBulkDelete(params *IpamRolesBulkDeleteParams, authInfo
 		PathPattern:        "/ipam/roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3335,7 +4055,7 @@ func (a *Client) IpamRolesBulkDelete(params *IpamRolesBulkDeleteParams, authInfo
 }
 
 /*
-  IpamRolesBulkPartialUpdate ipam roles bulk partial update API
+IpamRolesBulkPartialUpdate ipam roles bulk partial update API
 */
 func (a *Client) IpamRolesBulkPartialUpdate(params *IpamRolesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3348,7 +4068,7 @@ func (a *Client) IpamRolesBulkPartialUpdate(params *IpamRolesBulkPartialUpdatePa
 		PathPattern:        "/ipam/roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3373,7 +4093,7 @@ func (a *Client) IpamRolesBulkPartialUpdate(params *IpamRolesBulkPartialUpdatePa
 }
 
 /*
-  IpamRolesBulkUpdate ipam roles bulk update API
+IpamRolesBulkUpdate ipam roles bulk update API
 */
 func (a *Client) IpamRolesBulkUpdate(params *IpamRolesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3386,7 +4106,7 @@ func (a *Client) IpamRolesBulkUpdate(params *IpamRolesBulkUpdateParams, authInfo
 		PathPattern:        "/ipam/roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3411,7 +4131,7 @@ func (a *Client) IpamRolesBulkUpdate(params *IpamRolesBulkUpdateParams, authInfo
 }
 
 /*
-  IpamRolesCreate ipam roles create API
+IpamRolesCreate ipam roles create API
 */
 func (a *Client) IpamRolesCreate(params *IpamRolesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -3424,7 +4144,7 @@ func (a *Client) IpamRolesCreate(params *IpamRolesCreateParams, authInfo runtime
 		PathPattern:        "/ipam/roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3449,7 +4169,7 @@ func (a *Client) IpamRolesCreate(params *IpamRolesCreateParams, authInfo runtime
 }
 
 /*
-  IpamRolesDelete ipam roles delete API
+IpamRolesDelete ipam roles delete API
 */
 func (a *Client) IpamRolesDelete(params *IpamRolesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -3462,7 +4182,7 @@ func (a *Client) IpamRolesDelete(params *IpamRolesDeleteParams, authInfo runtime
 		PathPattern:        "/ipam/roles/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3487,7 +4207,7 @@ func (a *Client) IpamRolesDelete(params *IpamRolesDeleteParams, authInfo runtime
 }
 
 /*
-  IpamRolesList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamRolesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamRolesList(params *IpamRolesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesListOK, error) {
 	// TODO: Validate the params before sending
@@ -3500,7 +4220,7 @@ func (a *Client) IpamRolesList(params *IpamRolesListParams, authInfo runtime.Cli
 		PathPattern:        "/ipam/roles/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3525,7 +4245,7 @@ func (a *Client) IpamRolesList(params *IpamRolesListParams, authInfo runtime.Cli
 }
 
 /*
-  IpamRolesPartialUpdate ipam roles partial update API
+IpamRolesPartialUpdate ipam roles partial update API
 */
 func (a *Client) IpamRolesPartialUpdate(params *IpamRolesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3538,7 +4258,7 @@ func (a *Client) IpamRolesPartialUpdate(params *IpamRolesPartialUpdateParams, au
 		PathPattern:        "/ipam/roles/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3563,7 +4283,7 @@ func (a *Client) IpamRolesPartialUpdate(params *IpamRolesPartialUpdateParams, au
 }
 
 /*
-  IpamRolesRead ipam roles read API
+IpamRolesRead ipam roles read API
 */
 func (a *Client) IpamRolesRead(params *IpamRolesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -3576,7 +4296,7 @@ func (a *Client) IpamRolesRead(params *IpamRolesReadParams, authInfo runtime.Cli
 		PathPattern:        "/ipam/roles/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3601,7 +4321,7 @@ func (a *Client) IpamRolesRead(params *IpamRolesReadParams, authInfo runtime.Cli
 }
 
 /*
-  IpamRolesUpdate ipam roles update API
+IpamRolesUpdate ipam roles update API
 */
 func (a *Client) IpamRolesUpdate(params *IpamRolesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRolesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3614,7 +4334,7 @@ func (a *Client) IpamRolesUpdate(params *IpamRolesUpdateParams, authInfo runtime
 		PathPattern:        "/ipam/roles/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRolesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3639,7 +4359,7 @@ func (a *Client) IpamRolesUpdate(params *IpamRolesUpdateParams, authInfo runtime
 }
 
 /*
-  IpamRouteTargetsBulkDelete ipam route targets bulk delete API
+IpamRouteTargetsBulkDelete ipam route targets bulk delete API
 */
 func (a *Client) IpamRouteTargetsBulkDelete(params *IpamRouteTargetsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -3652,7 +4372,7 @@ func (a *Client) IpamRouteTargetsBulkDelete(params *IpamRouteTargetsBulkDeletePa
 		PathPattern:        "/ipam/route-targets/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3677,7 +4397,7 @@ func (a *Client) IpamRouteTargetsBulkDelete(params *IpamRouteTargetsBulkDeletePa
 }
 
 /*
-  IpamRouteTargetsBulkPartialUpdate ipam route targets bulk partial update API
+IpamRouteTargetsBulkPartialUpdate ipam route targets bulk partial update API
 */
 func (a *Client) IpamRouteTargetsBulkPartialUpdate(params *IpamRouteTargetsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3690,7 +4410,7 @@ func (a *Client) IpamRouteTargetsBulkPartialUpdate(params *IpamRouteTargetsBulkP
 		PathPattern:        "/ipam/route-targets/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3715,7 +4435,7 @@ func (a *Client) IpamRouteTargetsBulkPartialUpdate(params *IpamRouteTargetsBulkP
 }
 
 /*
-  IpamRouteTargetsBulkUpdate ipam route targets bulk update API
+IpamRouteTargetsBulkUpdate ipam route targets bulk update API
 */
 func (a *Client) IpamRouteTargetsBulkUpdate(params *IpamRouteTargetsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3728,7 +4448,7 @@ func (a *Client) IpamRouteTargetsBulkUpdate(params *IpamRouteTargetsBulkUpdatePa
 		PathPattern:        "/ipam/route-targets/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3753,7 +4473,7 @@ func (a *Client) IpamRouteTargetsBulkUpdate(params *IpamRouteTargetsBulkUpdatePa
 }
 
 /*
-  IpamRouteTargetsCreate ipam route targets create API
+IpamRouteTargetsCreate ipam route targets create API
 */
 func (a *Client) IpamRouteTargetsCreate(params *IpamRouteTargetsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -3766,7 +4486,7 @@ func (a *Client) IpamRouteTargetsCreate(params *IpamRouteTargetsCreateParams, au
 		PathPattern:        "/ipam/route-targets/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3791,7 +4511,7 @@ func (a *Client) IpamRouteTargetsCreate(params *IpamRouteTargetsCreateParams, au
 }
 
 /*
-  IpamRouteTargetsDelete ipam route targets delete API
+IpamRouteTargetsDelete ipam route targets delete API
 */
 func (a *Client) IpamRouteTargetsDelete(params *IpamRouteTargetsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -3804,7 +4524,7 @@ func (a *Client) IpamRouteTargetsDelete(params *IpamRouteTargetsDeleteParams, au
 		PathPattern:        "/ipam/route-targets/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3829,7 +4549,7 @@ func (a *Client) IpamRouteTargetsDelete(params *IpamRouteTargetsDeleteParams, au
 }
 
 /*
-  IpamRouteTargetsList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamRouteTargetsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamRouteTargetsList(params *IpamRouteTargetsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsListOK, error) {
 	// TODO: Validate the params before sending
@@ -3842,7 +4562,7 @@ func (a *Client) IpamRouteTargetsList(params *IpamRouteTargetsListParams, authIn
 		PathPattern:        "/ipam/route-targets/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3867,7 +4587,7 @@ func (a *Client) IpamRouteTargetsList(params *IpamRouteTargetsListParams, authIn
 }
 
 /*
-  IpamRouteTargetsPartialUpdate ipam route targets partial update API
+IpamRouteTargetsPartialUpdate ipam route targets partial update API
 */
 func (a *Client) IpamRouteTargetsPartialUpdate(params *IpamRouteTargetsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3880,7 +4600,7 @@ func (a *Client) IpamRouteTargetsPartialUpdate(params *IpamRouteTargetsPartialUp
 		PathPattern:        "/ipam/route-targets/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3905,7 +4625,7 @@ func (a *Client) IpamRouteTargetsPartialUpdate(params *IpamRouteTargetsPartialUp
 }
 
 /*
-  IpamRouteTargetsRead ipam route targets read API
+IpamRouteTargetsRead ipam route targets read API
 */
 func (a *Client) IpamRouteTargetsRead(params *IpamRouteTargetsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -3918,7 +4638,7 @@ func (a *Client) IpamRouteTargetsRead(params *IpamRouteTargetsReadParams, authIn
 		PathPattern:        "/ipam/route-targets/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3943,7 +4663,7 @@ func (a *Client) IpamRouteTargetsRead(params *IpamRouteTargetsReadParams, authIn
 }
 
 /*
-  IpamRouteTargetsUpdate ipam route targets update API
+IpamRouteTargetsUpdate ipam route targets update API
 */
 func (a *Client) IpamRouteTargetsUpdate(params *IpamRouteTargetsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamRouteTargetsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -3956,7 +4676,7 @@ func (a *Client) IpamRouteTargetsUpdate(params *IpamRouteTargetsUpdateParams, au
 		PathPattern:        "/ipam/route-targets/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamRouteTargetsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -3981,7 +4701,7 @@ func (a *Client) IpamRouteTargetsUpdate(params *IpamRouteTargetsUpdateParams, au
 }
 
 /*
-  IpamServiceTemplatesBulkDelete ipam service templates bulk delete API
+IpamServiceTemplatesBulkDelete ipam service templates bulk delete API
 */
 func (a *Client) IpamServiceTemplatesBulkDelete(params *IpamServiceTemplatesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -3994,7 +4714,7 @@ func (a *Client) IpamServiceTemplatesBulkDelete(params *IpamServiceTemplatesBulk
 		PathPattern:        "/ipam/service-templates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4019,7 +4739,7 @@ func (a *Client) IpamServiceTemplatesBulkDelete(params *IpamServiceTemplatesBulk
 }
 
 /*
-  IpamServiceTemplatesBulkPartialUpdate ipam service templates bulk partial update API
+IpamServiceTemplatesBulkPartialUpdate ipam service templates bulk partial update API
 */
 func (a *Client) IpamServiceTemplatesBulkPartialUpdate(params *IpamServiceTemplatesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4032,7 +4752,7 @@ func (a *Client) IpamServiceTemplatesBulkPartialUpdate(params *IpamServiceTempla
 		PathPattern:        "/ipam/service-templates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4057,7 +4777,7 @@ func (a *Client) IpamServiceTemplatesBulkPartialUpdate(params *IpamServiceTempla
 }
 
 /*
-  IpamServiceTemplatesBulkUpdate ipam service templates bulk update API
+IpamServiceTemplatesBulkUpdate ipam service templates bulk update API
 */
 func (a *Client) IpamServiceTemplatesBulkUpdate(params *IpamServiceTemplatesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4070,7 +4790,7 @@ func (a *Client) IpamServiceTemplatesBulkUpdate(params *IpamServiceTemplatesBulk
 		PathPattern:        "/ipam/service-templates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4095,7 +4815,7 @@ func (a *Client) IpamServiceTemplatesBulkUpdate(params *IpamServiceTemplatesBulk
 }
 
 /*
-  IpamServiceTemplatesCreate ipam service templates create API
+IpamServiceTemplatesCreate ipam service templates create API
 */
 func (a *Client) IpamServiceTemplatesCreate(params *IpamServiceTemplatesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -4108,7 +4828,7 @@ func (a *Client) IpamServiceTemplatesCreate(params *IpamServiceTemplatesCreatePa
 		PathPattern:        "/ipam/service-templates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4133,7 +4853,7 @@ func (a *Client) IpamServiceTemplatesCreate(params *IpamServiceTemplatesCreatePa
 }
 
 /*
-  IpamServiceTemplatesDelete ipam service templates delete API
+IpamServiceTemplatesDelete ipam service templates delete API
 */
 func (a *Client) IpamServiceTemplatesDelete(params *IpamServiceTemplatesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -4146,7 +4866,7 @@ func (a *Client) IpamServiceTemplatesDelete(params *IpamServiceTemplatesDeletePa
 		PathPattern:        "/ipam/service-templates/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4171,7 +4891,7 @@ func (a *Client) IpamServiceTemplatesDelete(params *IpamServiceTemplatesDeletePa
 }
 
 /*
-  IpamServiceTemplatesList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamServiceTemplatesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamServiceTemplatesList(params *IpamServiceTemplatesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesListOK, error) {
 	// TODO: Validate the params before sending
@@ -4184,7 +4904,7 @@ func (a *Client) IpamServiceTemplatesList(params *IpamServiceTemplatesListParams
 		PathPattern:        "/ipam/service-templates/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4209,7 +4929,7 @@ func (a *Client) IpamServiceTemplatesList(params *IpamServiceTemplatesListParams
 }
 
 /*
-  IpamServiceTemplatesPartialUpdate ipam service templates partial update API
+IpamServiceTemplatesPartialUpdate ipam service templates partial update API
 */
 func (a *Client) IpamServiceTemplatesPartialUpdate(params *IpamServiceTemplatesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4222,7 +4942,7 @@ func (a *Client) IpamServiceTemplatesPartialUpdate(params *IpamServiceTemplatesP
 		PathPattern:        "/ipam/service-templates/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4247,7 +4967,7 @@ func (a *Client) IpamServiceTemplatesPartialUpdate(params *IpamServiceTemplatesP
 }
 
 /*
-  IpamServiceTemplatesRead ipam service templates read API
+IpamServiceTemplatesRead ipam service templates read API
 */
 func (a *Client) IpamServiceTemplatesRead(params *IpamServiceTemplatesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -4260,7 +4980,7 @@ func (a *Client) IpamServiceTemplatesRead(params *IpamServiceTemplatesReadParams
 		PathPattern:        "/ipam/service-templates/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4285,7 +5005,7 @@ func (a *Client) IpamServiceTemplatesRead(params *IpamServiceTemplatesReadParams
 }
 
 /*
-  IpamServiceTemplatesUpdate ipam service templates update API
+IpamServiceTemplatesUpdate ipam service templates update API
 */
 func (a *Client) IpamServiceTemplatesUpdate(params *IpamServiceTemplatesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServiceTemplatesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4298,7 +5018,7 @@ func (a *Client) IpamServiceTemplatesUpdate(params *IpamServiceTemplatesUpdatePa
 		PathPattern:        "/ipam/service-templates/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServiceTemplatesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4323,7 +5043,7 @@ func (a *Client) IpamServiceTemplatesUpdate(params *IpamServiceTemplatesUpdatePa
 }
 
 /*
-  IpamServicesBulkDelete ipam services bulk delete API
+IpamServicesBulkDelete ipam services bulk delete API
 */
 func (a *Client) IpamServicesBulkDelete(params *IpamServicesBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -4336,7 +5056,7 @@ func (a *Client) IpamServicesBulkDelete(params *IpamServicesBulkDeleteParams, au
 		PathPattern:        "/ipam/services/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4361,7 +5081,7 @@ func (a *Client) IpamServicesBulkDelete(params *IpamServicesBulkDeleteParams, au
 }
 
 /*
-  IpamServicesBulkPartialUpdate ipam services bulk partial update API
+IpamServicesBulkPartialUpdate ipam services bulk partial update API
 */
 func (a *Client) IpamServicesBulkPartialUpdate(params *IpamServicesBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4374,7 +5094,7 @@ func (a *Client) IpamServicesBulkPartialUpdate(params *IpamServicesBulkPartialUp
 		PathPattern:        "/ipam/services/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4399,7 +5119,7 @@ func (a *Client) IpamServicesBulkPartialUpdate(params *IpamServicesBulkPartialUp
 }
 
 /*
-  IpamServicesBulkUpdate ipam services bulk update API
+IpamServicesBulkUpdate ipam services bulk update API
 */
 func (a *Client) IpamServicesBulkUpdate(params *IpamServicesBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4412,7 +5132,7 @@ func (a *Client) IpamServicesBulkUpdate(params *IpamServicesBulkUpdateParams, au
 		PathPattern:        "/ipam/services/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4437,7 +5157,7 @@ func (a *Client) IpamServicesBulkUpdate(params *IpamServicesBulkUpdateParams, au
 }
 
 /*
-  IpamServicesCreate ipam services create API
+IpamServicesCreate ipam services create API
 */
 func (a *Client) IpamServicesCreate(params *IpamServicesCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -4450,7 +5170,7 @@ func (a *Client) IpamServicesCreate(params *IpamServicesCreateParams, authInfo r
 		PathPattern:        "/ipam/services/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4475,7 +5195,7 @@ func (a *Client) IpamServicesCreate(params *IpamServicesCreateParams, authInfo r
 }
 
 /*
-  IpamServicesDelete ipam services delete API
+IpamServicesDelete ipam services delete API
 */
 func (a *Client) IpamServicesDelete(params *IpamServicesDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -4488,7 +5208,7 @@ func (a *Client) IpamServicesDelete(params *IpamServicesDeleteParams, authInfo r
 		PathPattern:        "/ipam/services/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4513,7 +5233,7 @@ func (a *Client) IpamServicesDelete(params *IpamServicesDeleteParams, authInfo r
 }
 
 /*
-  IpamServicesList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamServicesList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamServicesList(params *IpamServicesListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesListOK, error) {
 	// TODO: Validate the params before sending
@@ -4526,7 +5246,7 @@ func (a *Client) IpamServicesList(params *IpamServicesListParams, authInfo runti
 		PathPattern:        "/ipam/services/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4551,7 +5271,7 @@ func (a *Client) IpamServicesList(params *IpamServicesListParams, authInfo runti
 }
 
 /*
-  IpamServicesPartialUpdate ipam services partial update API
+IpamServicesPartialUpdate ipam services partial update API
 */
 func (a *Client) IpamServicesPartialUpdate(params *IpamServicesPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4564,7 +5284,7 @@ func (a *Client) IpamServicesPartialUpdate(params *IpamServicesPartialUpdatePara
 		PathPattern:        "/ipam/services/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4589,7 +5309,7 @@ func (a *Client) IpamServicesPartialUpdate(params *IpamServicesPartialUpdatePara
 }
 
 /*
-  IpamServicesRead ipam services read API
+IpamServicesRead ipam services read API
 */
 func (a *Client) IpamServicesRead(params *IpamServicesReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesReadOK, error) {
 	// TODO: Validate the params before sending
@@ -4602,7 +5322,7 @@ func (a *Client) IpamServicesRead(params *IpamServicesReadParams, authInfo runti
 		PathPattern:        "/ipam/services/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4627,7 +5347,7 @@ func (a *Client) IpamServicesRead(params *IpamServicesReadParams, authInfo runti
 }
 
 /*
-  IpamServicesUpdate ipam services update API
+IpamServicesUpdate ipam services update API
 */
 func (a *Client) IpamServicesUpdate(params *IpamServicesUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamServicesUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4640,7 +5360,7 @@ func (a *Client) IpamServicesUpdate(params *IpamServicesUpdateParams, authInfo r
 		PathPattern:        "/ipam/services/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamServicesUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4665,7 +5385,7 @@ func (a *Client) IpamServicesUpdate(params *IpamServicesUpdateParams, authInfo r
 }
 
 /*
-  IpamVlanGroupsAvailableVlansCreate ipam vlan groups available vlans create API
+IpamVlanGroupsAvailableVlansCreate ipam vlan groups available vlans create API
 */
 func (a *Client) IpamVlanGroupsAvailableVlansCreate(params *IpamVlanGroupsAvailableVlansCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsAvailableVlansCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -4678,7 +5398,7 @@ func (a *Client) IpamVlanGroupsAvailableVlansCreate(params *IpamVlanGroupsAvaila
 		PathPattern:        "/ipam/vlan-groups/{id}/available-vlans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsAvailableVlansCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4703,7 +5423,7 @@ func (a *Client) IpamVlanGroupsAvailableVlansCreate(params *IpamVlanGroupsAvaila
 }
 
 /*
-  IpamVlanGroupsAvailableVlansList ipam vlan groups available vlans list API
+IpamVlanGroupsAvailableVlansList ipam vlan groups available vlans list API
 */
 func (a *Client) IpamVlanGroupsAvailableVlansList(params *IpamVlanGroupsAvailableVlansListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsAvailableVlansListOK, error) {
 	// TODO: Validate the params before sending
@@ -4716,7 +5436,7 @@ func (a *Client) IpamVlanGroupsAvailableVlansList(params *IpamVlanGroupsAvailabl
 		PathPattern:        "/ipam/vlan-groups/{id}/available-vlans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsAvailableVlansListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4741,7 +5461,7 @@ func (a *Client) IpamVlanGroupsAvailableVlansList(params *IpamVlanGroupsAvailabl
 }
 
 /*
-  IpamVlanGroupsBulkDelete ipam vlan groups bulk delete API
+IpamVlanGroupsBulkDelete ipam vlan groups bulk delete API
 */
 func (a *Client) IpamVlanGroupsBulkDelete(params *IpamVlanGroupsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -4754,7 +5474,7 @@ func (a *Client) IpamVlanGroupsBulkDelete(params *IpamVlanGroupsBulkDeleteParams
 		PathPattern:        "/ipam/vlan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4779,7 +5499,7 @@ func (a *Client) IpamVlanGroupsBulkDelete(params *IpamVlanGroupsBulkDeleteParams
 }
 
 /*
-  IpamVlanGroupsBulkPartialUpdate ipam vlan groups bulk partial update API
+IpamVlanGroupsBulkPartialUpdate ipam vlan groups bulk partial update API
 */
 func (a *Client) IpamVlanGroupsBulkPartialUpdate(params *IpamVlanGroupsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4792,7 +5512,7 @@ func (a *Client) IpamVlanGroupsBulkPartialUpdate(params *IpamVlanGroupsBulkParti
 		PathPattern:        "/ipam/vlan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4817,7 +5537,7 @@ func (a *Client) IpamVlanGroupsBulkPartialUpdate(params *IpamVlanGroupsBulkParti
 }
 
 /*
-  IpamVlanGroupsBulkUpdate ipam vlan groups bulk update API
+IpamVlanGroupsBulkUpdate ipam vlan groups bulk update API
 */
 func (a *Client) IpamVlanGroupsBulkUpdate(params *IpamVlanGroupsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4830,7 +5550,7 @@ func (a *Client) IpamVlanGroupsBulkUpdate(params *IpamVlanGroupsBulkUpdateParams
 		PathPattern:        "/ipam/vlan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4855,7 +5575,7 @@ func (a *Client) IpamVlanGroupsBulkUpdate(params *IpamVlanGroupsBulkUpdateParams
 }
 
 /*
-  IpamVlanGroupsCreate ipam vlan groups create API
+IpamVlanGroupsCreate ipam vlan groups create API
 */
 func (a *Client) IpamVlanGroupsCreate(params *IpamVlanGroupsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -4868,7 +5588,7 @@ func (a *Client) IpamVlanGroupsCreate(params *IpamVlanGroupsCreateParams, authIn
 		PathPattern:        "/ipam/vlan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4893,7 +5613,7 @@ func (a *Client) IpamVlanGroupsCreate(params *IpamVlanGroupsCreateParams, authIn
 }
 
 /*
-  IpamVlanGroupsDelete ipam vlan groups delete API
+IpamVlanGroupsDelete ipam vlan groups delete API
 */
 func (a *Client) IpamVlanGroupsDelete(params *IpamVlanGroupsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -4906,7 +5626,7 @@ func (a *Client) IpamVlanGroupsDelete(params *IpamVlanGroupsDeleteParams, authIn
 		PathPattern:        "/ipam/vlan-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4931,7 +5651,7 @@ func (a *Client) IpamVlanGroupsDelete(params *IpamVlanGroupsDeleteParams, authIn
 }
 
 /*
-  IpamVlanGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamVlanGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamVlanGroupsList(params *IpamVlanGroupsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsListOK, error) {
 	// TODO: Validate the params before sending
@@ -4944,7 +5664,7 @@ func (a *Client) IpamVlanGroupsList(params *IpamVlanGroupsListParams, authInfo r
 		PathPattern:        "/ipam/vlan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -4969,7 +5689,7 @@ func (a *Client) IpamVlanGroupsList(params *IpamVlanGroupsListParams, authInfo r
 }
 
 /*
-  IpamVlanGroupsPartialUpdate ipam vlan groups partial update API
+IpamVlanGroupsPartialUpdate ipam vlan groups partial update API
 */
 func (a *Client) IpamVlanGroupsPartialUpdate(params *IpamVlanGroupsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -4982,7 +5702,7 @@ func (a *Client) IpamVlanGroupsPartialUpdate(params *IpamVlanGroupsPartialUpdate
 		PathPattern:        "/ipam/vlan-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5007,7 +5727,7 @@ func (a *Client) IpamVlanGroupsPartialUpdate(params *IpamVlanGroupsPartialUpdate
 }
 
 /*
-  IpamVlanGroupsRead ipam vlan groups read API
+IpamVlanGroupsRead ipam vlan groups read API
 */
 func (a *Client) IpamVlanGroupsRead(params *IpamVlanGroupsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -5020,7 +5740,7 @@ func (a *Client) IpamVlanGroupsRead(params *IpamVlanGroupsReadParams, authInfo r
 		PathPattern:        "/ipam/vlan-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5045,7 +5765,7 @@ func (a *Client) IpamVlanGroupsRead(params *IpamVlanGroupsReadParams, authInfo r
 }
 
 /*
-  IpamVlanGroupsUpdate ipam vlan groups update API
+IpamVlanGroupsUpdate ipam vlan groups update API
 */
 func (a *Client) IpamVlanGroupsUpdate(params *IpamVlanGroupsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlanGroupsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5058,7 +5778,7 @@ func (a *Client) IpamVlanGroupsUpdate(params *IpamVlanGroupsUpdateParams, authIn
 		PathPattern:        "/ipam/vlan-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlanGroupsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5083,7 +5803,7 @@ func (a *Client) IpamVlanGroupsUpdate(params *IpamVlanGroupsUpdateParams, authIn
 }
 
 /*
-  IpamVlansBulkDelete ipam vlans bulk delete API
+IpamVlansBulkDelete ipam vlans bulk delete API
 */
 func (a *Client) IpamVlansBulkDelete(params *IpamVlansBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -5096,7 +5816,7 @@ func (a *Client) IpamVlansBulkDelete(params *IpamVlansBulkDeleteParams, authInfo
 		PathPattern:        "/ipam/vlans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5121,7 +5841,7 @@ func (a *Client) IpamVlansBulkDelete(params *IpamVlansBulkDeleteParams, authInfo
 }
 
 /*
-  IpamVlansBulkPartialUpdate ipam vlans bulk partial update API
+IpamVlansBulkPartialUpdate ipam vlans bulk partial update API
 */
 func (a *Client) IpamVlansBulkPartialUpdate(params *IpamVlansBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5134,7 +5854,7 @@ func (a *Client) IpamVlansBulkPartialUpdate(params *IpamVlansBulkPartialUpdatePa
 		PathPattern:        "/ipam/vlans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5159,7 +5879,7 @@ func (a *Client) IpamVlansBulkPartialUpdate(params *IpamVlansBulkPartialUpdatePa
 }
 
 /*
-  IpamVlansBulkUpdate ipam vlans bulk update API
+IpamVlansBulkUpdate ipam vlans bulk update API
 */
 func (a *Client) IpamVlansBulkUpdate(params *IpamVlansBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5172,7 +5892,7 @@ func (a *Client) IpamVlansBulkUpdate(params *IpamVlansBulkUpdateParams, authInfo
 		PathPattern:        "/ipam/vlans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5197,7 +5917,7 @@ func (a *Client) IpamVlansBulkUpdate(params *IpamVlansBulkUpdateParams, authInfo
 }
 
 /*
-  IpamVlansCreate ipam vlans create API
+IpamVlansCreate ipam vlans create API
 */
 func (a *Client) IpamVlansCreate(params *IpamVlansCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -5210,7 +5930,7 @@ func (a *Client) IpamVlansCreate(params *IpamVlansCreateParams, authInfo runtime
 		PathPattern:        "/ipam/vlans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5235,7 +5955,7 @@ func (a *Client) IpamVlansCreate(params *IpamVlansCreateParams, authInfo runtime
 }
 
 /*
-  IpamVlansDelete ipam vlans delete API
+IpamVlansDelete ipam vlans delete API
 */
 func (a *Client) IpamVlansDelete(params *IpamVlansDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -5248,7 +5968,7 @@ func (a *Client) IpamVlansDelete(params *IpamVlansDeleteParams, authInfo runtime
 		PathPattern:        "/ipam/vlans/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5273,7 +5993,7 @@ func (a *Client) IpamVlansDelete(params *IpamVlansDeleteParams, authInfo runtime
 }
 
 /*
-  IpamVlansList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamVlansList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamVlansList(params *IpamVlansListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansListOK, error) {
 	// TODO: Validate the params before sending
@@ -5286,7 +6006,7 @@ func (a *Client) IpamVlansList(params *IpamVlansListParams, authInfo runtime.Cli
 		PathPattern:        "/ipam/vlans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5311,7 +6031,7 @@ func (a *Client) IpamVlansList(params *IpamVlansListParams, authInfo runtime.Cli
 }
 
 /*
-  IpamVlansPartialUpdate ipam vlans partial update API
+IpamVlansPartialUpdate ipam vlans partial update API
 */
 func (a *Client) IpamVlansPartialUpdate(params *IpamVlansPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5324,7 +6044,7 @@ func (a *Client) IpamVlansPartialUpdate(params *IpamVlansPartialUpdateParams, au
 		PathPattern:        "/ipam/vlans/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5349,7 +6069,7 @@ func (a *Client) IpamVlansPartialUpdate(params *IpamVlansPartialUpdateParams, au
 }
 
 /*
-  IpamVlansRead ipam vlans read API
+IpamVlansRead ipam vlans read API
 */
 func (a *Client) IpamVlansRead(params *IpamVlansReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansReadOK, error) {
 	// TODO: Validate the params before sending
@@ -5362,7 +6082,7 @@ func (a *Client) IpamVlansRead(params *IpamVlansReadParams, authInfo runtime.Cli
 		PathPattern:        "/ipam/vlans/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5387,7 +6107,7 @@ func (a *Client) IpamVlansRead(params *IpamVlansReadParams, authInfo runtime.Cli
 }
 
 /*
-  IpamVlansUpdate ipam vlans update API
+IpamVlansUpdate ipam vlans update API
 */
 func (a *Client) IpamVlansUpdate(params *IpamVlansUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVlansUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5400,7 +6120,7 @@ func (a *Client) IpamVlansUpdate(params *IpamVlansUpdateParams, authInfo runtime
 		PathPattern:        "/ipam/vlans/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVlansUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5425,7 +6145,7 @@ func (a *Client) IpamVlansUpdate(params *IpamVlansUpdateParams, authInfo runtime
 }
 
 /*
-  IpamVrfsBulkDelete ipam vrfs bulk delete API
+IpamVrfsBulkDelete ipam vrfs bulk delete API
 */
 func (a *Client) IpamVrfsBulkDelete(params *IpamVrfsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -5438,7 +6158,7 @@ func (a *Client) IpamVrfsBulkDelete(params *IpamVrfsBulkDeleteParams, authInfo r
 		PathPattern:        "/ipam/vrfs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5463,7 +6183,7 @@ func (a *Client) IpamVrfsBulkDelete(params *IpamVrfsBulkDeleteParams, authInfo r
 }
 
 /*
-  IpamVrfsBulkPartialUpdate ipam vrfs bulk partial update API
+IpamVrfsBulkPartialUpdate ipam vrfs bulk partial update API
 */
 func (a *Client) IpamVrfsBulkPartialUpdate(params *IpamVrfsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5476,7 +6196,7 @@ func (a *Client) IpamVrfsBulkPartialUpdate(params *IpamVrfsBulkPartialUpdatePara
 		PathPattern:        "/ipam/vrfs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5501,7 +6221,7 @@ func (a *Client) IpamVrfsBulkPartialUpdate(params *IpamVrfsBulkPartialUpdatePara
 }
 
 /*
-  IpamVrfsBulkUpdate ipam vrfs bulk update API
+IpamVrfsBulkUpdate ipam vrfs bulk update API
 */
 func (a *Client) IpamVrfsBulkUpdate(params *IpamVrfsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5514,7 +6234,7 @@ func (a *Client) IpamVrfsBulkUpdate(params *IpamVrfsBulkUpdateParams, authInfo r
 		PathPattern:        "/ipam/vrfs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5539,7 +6259,7 @@ func (a *Client) IpamVrfsBulkUpdate(params *IpamVrfsBulkUpdateParams, authInfo r
 }
 
 /*
-  IpamVrfsCreate ipam vrfs create API
+IpamVrfsCreate ipam vrfs create API
 */
 func (a *Client) IpamVrfsCreate(params *IpamVrfsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -5552,7 +6272,7 @@ func (a *Client) IpamVrfsCreate(params *IpamVrfsCreateParams, authInfo runtime.C
 		PathPattern:        "/ipam/vrfs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5577,7 +6297,7 @@ func (a *Client) IpamVrfsCreate(params *IpamVrfsCreateParams, authInfo runtime.C
 }
 
 /*
-  IpamVrfsDelete ipam vrfs delete API
+IpamVrfsDelete ipam vrfs delete API
 */
 func (a *Client) IpamVrfsDelete(params *IpamVrfsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -5590,7 +6310,7 @@ func (a *Client) IpamVrfsDelete(params *IpamVrfsDeleteParams, authInfo runtime.C
 		PathPattern:        "/ipam/vrfs/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5615,7 +6335,7 @@ func (a *Client) IpamVrfsDelete(params *IpamVrfsDeleteParams, authInfo runtime.C
 }
 
 /*
-  IpamVrfsList Overrides ListModelMixin to allow processing ExportTemplates.
+IpamVrfsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) IpamVrfsList(params *IpamVrfsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsListOK, error) {
 	// TODO: Validate the params before sending
@@ -5628,7 +6348,7 @@ func (a *Client) IpamVrfsList(params *IpamVrfsListParams, authInfo runtime.Clien
 		PathPattern:        "/ipam/vrfs/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5653,7 +6373,7 @@ func (a *Client) IpamVrfsList(params *IpamVrfsListParams, authInfo runtime.Clien
 }
 
 /*
-  IpamVrfsPartialUpdate ipam vrfs partial update API
+IpamVrfsPartialUpdate ipam vrfs partial update API
 */
 func (a *Client) IpamVrfsPartialUpdate(params *IpamVrfsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5666,7 +6386,7 @@ func (a *Client) IpamVrfsPartialUpdate(params *IpamVrfsPartialUpdateParams, auth
 		PathPattern:        "/ipam/vrfs/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5691,7 +6411,7 @@ func (a *Client) IpamVrfsPartialUpdate(params *IpamVrfsPartialUpdateParams, auth
 }
 
 /*
-  IpamVrfsRead ipam vrfs read API
+IpamVrfsRead ipam vrfs read API
 */
 func (a *Client) IpamVrfsRead(params *IpamVrfsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -5704,7 +6424,7 @@ func (a *Client) IpamVrfsRead(params *IpamVrfsReadParams, authInfo runtime.Clien
 		PathPattern:        "/ipam/vrfs/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -5729,7 +6449,7 @@ func (a *Client) IpamVrfsRead(params *IpamVrfsReadParams, authInfo runtime.Clien
 }
 
 /*
-  IpamVrfsUpdate ipam vrfs update API
+IpamVrfsUpdate ipam vrfs update API
 */
 func (a *Client) IpamVrfsUpdate(params *IpamVrfsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*IpamVrfsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -5742,7 +6462,7 @@ func (a *Client) IpamVrfsUpdate(params *IpamVrfsUpdateParams, authInfo runtime.C
 		PathPattern:        "/ipam/vrfs/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &IpamVrfsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,

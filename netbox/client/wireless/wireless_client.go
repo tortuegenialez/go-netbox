@@ -101,7 +101,7 @@ type ClientService interface {
 }
 
 /*
-  WirelessWirelessLanGroupsBulkDelete wireless wireless lan groups bulk delete API
+WirelessWirelessLanGroupsBulkDelete wireless wireless lan groups bulk delete API
 */
 func (a *Client) WirelessWirelessLanGroupsBulkDelete(params *WirelessWirelessLanGroupsBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -114,7 +114,7 @@ func (a *Client) WirelessWirelessLanGroupsBulkDelete(params *WirelessWirelessLan
 		PathPattern:        "/wireless/wireless-lan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -139,7 +139,7 @@ func (a *Client) WirelessWirelessLanGroupsBulkDelete(params *WirelessWirelessLan
 }
 
 /*
-  WirelessWirelessLanGroupsBulkPartialUpdate wireless wireless lan groups bulk partial update API
+WirelessWirelessLanGroupsBulkPartialUpdate wireless wireless lan groups bulk partial update API
 */
 func (a *Client) WirelessWirelessLanGroupsBulkPartialUpdate(params *WirelessWirelessLanGroupsBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -152,7 +152,7 @@ func (a *Client) WirelessWirelessLanGroupsBulkPartialUpdate(params *WirelessWire
 		PathPattern:        "/wireless/wireless-lan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -177,7 +177,7 @@ func (a *Client) WirelessWirelessLanGroupsBulkPartialUpdate(params *WirelessWire
 }
 
 /*
-  WirelessWirelessLanGroupsBulkUpdate wireless wireless lan groups bulk update API
+WirelessWirelessLanGroupsBulkUpdate wireless wireless lan groups bulk update API
 */
 func (a *Client) WirelessWirelessLanGroupsBulkUpdate(params *WirelessWirelessLanGroupsBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -190,7 +190,7 @@ func (a *Client) WirelessWirelessLanGroupsBulkUpdate(params *WirelessWirelessLan
 		PathPattern:        "/wireless/wireless-lan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -215,7 +215,7 @@ func (a *Client) WirelessWirelessLanGroupsBulkUpdate(params *WirelessWirelessLan
 }
 
 /*
-  WirelessWirelessLanGroupsCreate wireless wireless lan groups create API
+WirelessWirelessLanGroupsCreate wireless wireless lan groups create API
 */
 func (a *Client) WirelessWirelessLanGroupsCreate(params *WirelessWirelessLanGroupsCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -228,7 +228,7 @@ func (a *Client) WirelessWirelessLanGroupsCreate(params *WirelessWirelessLanGrou
 		PathPattern:        "/wireless/wireless-lan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -253,7 +253,7 @@ func (a *Client) WirelessWirelessLanGroupsCreate(params *WirelessWirelessLanGrou
 }
 
 /*
-  WirelessWirelessLanGroupsDelete wireless wireless lan groups delete API
+WirelessWirelessLanGroupsDelete wireless wireless lan groups delete API
 */
 func (a *Client) WirelessWirelessLanGroupsDelete(params *WirelessWirelessLanGroupsDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -266,7 +266,7 @@ func (a *Client) WirelessWirelessLanGroupsDelete(params *WirelessWirelessLanGrou
 		PathPattern:        "/wireless/wireless-lan-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -291,7 +291,7 @@ func (a *Client) WirelessWirelessLanGroupsDelete(params *WirelessWirelessLanGrou
 }
 
 /*
-  WirelessWirelessLanGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
+WirelessWirelessLanGroupsList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) WirelessWirelessLanGroupsList(params *WirelessWirelessLanGroupsListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsListOK, error) {
 	// TODO: Validate the params before sending
@@ -304,7 +304,7 @@ func (a *Client) WirelessWirelessLanGroupsList(params *WirelessWirelessLanGroups
 		PathPattern:        "/wireless/wireless-lan-groups/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -329,7 +329,7 @@ func (a *Client) WirelessWirelessLanGroupsList(params *WirelessWirelessLanGroups
 }
 
 /*
-  WirelessWirelessLanGroupsPartialUpdate wireless wireless lan groups partial update API
+WirelessWirelessLanGroupsPartialUpdate wireless wireless lan groups partial update API
 */
 func (a *Client) WirelessWirelessLanGroupsPartialUpdate(params *WirelessWirelessLanGroupsPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -342,7 +342,7 @@ func (a *Client) WirelessWirelessLanGroupsPartialUpdate(params *WirelessWireless
 		PathPattern:        "/wireless/wireless-lan-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -367,7 +367,7 @@ func (a *Client) WirelessWirelessLanGroupsPartialUpdate(params *WirelessWireless
 }
 
 /*
-  WirelessWirelessLanGroupsRead wireless wireless lan groups read API
+WirelessWirelessLanGroupsRead wireless wireless lan groups read API
 */
 func (a *Client) WirelessWirelessLanGroupsRead(params *WirelessWirelessLanGroupsReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsReadOK, error) {
 	// TODO: Validate the params before sending
@@ -380,7 +380,7 @@ func (a *Client) WirelessWirelessLanGroupsRead(params *WirelessWirelessLanGroups
 		PathPattern:        "/wireless/wireless-lan-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -405,7 +405,7 @@ func (a *Client) WirelessWirelessLanGroupsRead(params *WirelessWirelessLanGroups
 }
 
 /*
-  WirelessWirelessLanGroupsUpdate wireless wireless lan groups update API
+WirelessWirelessLanGroupsUpdate wireless wireless lan groups update API
 */
 func (a *Client) WirelessWirelessLanGroupsUpdate(params *WirelessWirelessLanGroupsUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLanGroupsUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -418,7 +418,7 @@ func (a *Client) WirelessWirelessLanGroupsUpdate(params *WirelessWirelessLanGrou
 		PathPattern:        "/wireless/wireless-lan-groups/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLanGroupsUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -443,7 +443,7 @@ func (a *Client) WirelessWirelessLanGroupsUpdate(params *WirelessWirelessLanGrou
 }
 
 /*
-  WirelessWirelessLansBulkDelete wireless wireless lans bulk delete API
+WirelessWirelessLansBulkDelete wireless wireless lans bulk delete API
 */
 func (a *Client) WirelessWirelessLansBulkDelete(params *WirelessWirelessLansBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -456,7 +456,7 @@ func (a *Client) WirelessWirelessLansBulkDelete(params *WirelessWirelessLansBulk
 		PathPattern:        "/wireless/wireless-lans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -481,7 +481,7 @@ func (a *Client) WirelessWirelessLansBulkDelete(params *WirelessWirelessLansBulk
 }
 
 /*
-  WirelessWirelessLansBulkPartialUpdate wireless wireless lans bulk partial update API
+WirelessWirelessLansBulkPartialUpdate wireless wireless lans bulk partial update API
 */
 func (a *Client) WirelessWirelessLansBulkPartialUpdate(params *WirelessWirelessLansBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -494,7 +494,7 @@ func (a *Client) WirelessWirelessLansBulkPartialUpdate(params *WirelessWirelessL
 		PathPattern:        "/wireless/wireless-lans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -519,7 +519,7 @@ func (a *Client) WirelessWirelessLansBulkPartialUpdate(params *WirelessWirelessL
 }
 
 /*
-  WirelessWirelessLansBulkUpdate wireless wireless lans bulk update API
+WirelessWirelessLansBulkUpdate wireless wireless lans bulk update API
 */
 func (a *Client) WirelessWirelessLansBulkUpdate(params *WirelessWirelessLansBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -532,7 +532,7 @@ func (a *Client) WirelessWirelessLansBulkUpdate(params *WirelessWirelessLansBulk
 		PathPattern:        "/wireless/wireless-lans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -557,7 +557,7 @@ func (a *Client) WirelessWirelessLansBulkUpdate(params *WirelessWirelessLansBulk
 }
 
 /*
-  WirelessWirelessLansCreate wireless wireless lans create API
+WirelessWirelessLansCreate wireless wireless lans create API
 */
 func (a *Client) WirelessWirelessLansCreate(params *WirelessWirelessLansCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -570,7 +570,7 @@ func (a *Client) WirelessWirelessLansCreate(params *WirelessWirelessLansCreatePa
 		PathPattern:        "/wireless/wireless-lans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -595,7 +595,7 @@ func (a *Client) WirelessWirelessLansCreate(params *WirelessWirelessLansCreatePa
 }
 
 /*
-  WirelessWirelessLansDelete wireless wireless lans delete API
+WirelessWirelessLansDelete wireless wireless lans delete API
 */
 func (a *Client) WirelessWirelessLansDelete(params *WirelessWirelessLansDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -608,7 +608,7 @@ func (a *Client) WirelessWirelessLansDelete(params *WirelessWirelessLansDeletePa
 		PathPattern:        "/wireless/wireless-lans/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -633,7 +633,7 @@ func (a *Client) WirelessWirelessLansDelete(params *WirelessWirelessLansDeletePa
 }
 
 /*
-  WirelessWirelessLansList Overrides ListModelMixin to allow processing ExportTemplates.
+WirelessWirelessLansList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) WirelessWirelessLansList(params *WirelessWirelessLansListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansListOK, error) {
 	// TODO: Validate the params before sending
@@ -646,7 +646,7 @@ func (a *Client) WirelessWirelessLansList(params *WirelessWirelessLansListParams
 		PathPattern:        "/wireless/wireless-lans/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -671,7 +671,7 @@ func (a *Client) WirelessWirelessLansList(params *WirelessWirelessLansListParams
 }
 
 /*
-  WirelessWirelessLansPartialUpdate wireless wireless lans partial update API
+WirelessWirelessLansPartialUpdate wireless wireless lans partial update API
 */
 func (a *Client) WirelessWirelessLansPartialUpdate(params *WirelessWirelessLansPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -684,7 +684,7 @@ func (a *Client) WirelessWirelessLansPartialUpdate(params *WirelessWirelessLansP
 		PathPattern:        "/wireless/wireless-lans/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -709,7 +709,7 @@ func (a *Client) WirelessWirelessLansPartialUpdate(params *WirelessWirelessLansP
 }
 
 /*
-  WirelessWirelessLansRead wireless wireless lans read API
+WirelessWirelessLansRead wireless wireless lans read API
 */
 func (a *Client) WirelessWirelessLansRead(params *WirelessWirelessLansReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansReadOK, error) {
 	// TODO: Validate the params before sending
@@ -722,7 +722,7 @@ func (a *Client) WirelessWirelessLansRead(params *WirelessWirelessLansReadParams
 		PathPattern:        "/wireless/wireless-lans/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -747,7 +747,7 @@ func (a *Client) WirelessWirelessLansRead(params *WirelessWirelessLansReadParams
 }
 
 /*
-  WirelessWirelessLansUpdate wireless wireless lans update API
+WirelessWirelessLansUpdate wireless wireless lans update API
 */
 func (a *Client) WirelessWirelessLansUpdate(params *WirelessWirelessLansUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLansUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -760,7 +760,7 @@ func (a *Client) WirelessWirelessLansUpdate(params *WirelessWirelessLansUpdatePa
 		PathPattern:        "/wireless/wireless-lans/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLansUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -785,7 +785,7 @@ func (a *Client) WirelessWirelessLansUpdate(params *WirelessWirelessLansUpdatePa
 }
 
 /*
-  WirelessWirelessLinksBulkDelete wireless wireless links bulk delete API
+WirelessWirelessLinksBulkDelete wireless wireless links bulk delete API
 */
 func (a *Client) WirelessWirelessLinksBulkDelete(params *WirelessWirelessLinksBulkDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksBulkDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -798,7 +798,7 @@ func (a *Client) WirelessWirelessLinksBulkDelete(params *WirelessWirelessLinksBu
 		PathPattern:        "/wireless/wireless-links/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksBulkDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -823,7 +823,7 @@ func (a *Client) WirelessWirelessLinksBulkDelete(params *WirelessWirelessLinksBu
 }
 
 /*
-  WirelessWirelessLinksBulkPartialUpdate wireless wireless links bulk partial update API
+WirelessWirelessLinksBulkPartialUpdate wireless wireless links bulk partial update API
 */
 func (a *Client) WirelessWirelessLinksBulkPartialUpdate(params *WirelessWirelessLinksBulkPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksBulkPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -836,7 +836,7 @@ func (a *Client) WirelessWirelessLinksBulkPartialUpdate(params *WirelessWireless
 		PathPattern:        "/wireless/wireless-links/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksBulkPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -861,7 +861,7 @@ func (a *Client) WirelessWirelessLinksBulkPartialUpdate(params *WirelessWireless
 }
 
 /*
-  WirelessWirelessLinksBulkUpdate wireless wireless links bulk update API
+WirelessWirelessLinksBulkUpdate wireless wireless links bulk update API
 */
 func (a *Client) WirelessWirelessLinksBulkUpdate(params *WirelessWirelessLinksBulkUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksBulkUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -874,7 +874,7 @@ func (a *Client) WirelessWirelessLinksBulkUpdate(params *WirelessWirelessLinksBu
 		PathPattern:        "/wireless/wireless-links/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksBulkUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -899,7 +899,7 @@ func (a *Client) WirelessWirelessLinksBulkUpdate(params *WirelessWirelessLinksBu
 }
 
 /*
-  WirelessWirelessLinksCreate wireless wireless links create API
+WirelessWirelessLinksCreate wireless wireless links create API
 */
 func (a *Client) WirelessWirelessLinksCreate(params *WirelessWirelessLinksCreateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksCreateCreated, error) {
 	// TODO: Validate the params before sending
@@ -912,7 +912,7 @@ func (a *Client) WirelessWirelessLinksCreate(params *WirelessWirelessLinksCreate
 		PathPattern:        "/wireless/wireless-links/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksCreateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -937,7 +937,7 @@ func (a *Client) WirelessWirelessLinksCreate(params *WirelessWirelessLinksCreate
 }
 
 /*
-  WirelessWirelessLinksDelete wireless wireless links delete API
+WirelessWirelessLinksDelete wireless wireless links delete API
 */
 func (a *Client) WirelessWirelessLinksDelete(params *WirelessWirelessLinksDeleteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksDeleteNoContent, error) {
 	// TODO: Validate the params before sending
@@ -950,7 +950,7 @@ func (a *Client) WirelessWirelessLinksDelete(params *WirelessWirelessLinksDelete
 		PathPattern:        "/wireless/wireless-links/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksDeleteReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -975,7 +975,7 @@ func (a *Client) WirelessWirelessLinksDelete(params *WirelessWirelessLinksDelete
 }
 
 /*
-  WirelessWirelessLinksList Overrides ListModelMixin to allow processing ExportTemplates.
+WirelessWirelessLinksList Overrides ListModelMixin to allow processing ExportTemplates.
 */
 func (a *Client) WirelessWirelessLinksList(params *WirelessWirelessLinksListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksListOK, error) {
 	// TODO: Validate the params before sending
@@ -988,7 +988,7 @@ func (a *Client) WirelessWirelessLinksList(params *WirelessWirelessLinksListPara
 		PathPattern:        "/wireless/wireless-links/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksListReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1013,7 +1013,7 @@ func (a *Client) WirelessWirelessLinksList(params *WirelessWirelessLinksListPara
 }
 
 /*
-  WirelessWirelessLinksPartialUpdate wireless wireless links partial update API
+WirelessWirelessLinksPartialUpdate wireless wireless links partial update API
 */
 func (a *Client) WirelessWirelessLinksPartialUpdate(params *WirelessWirelessLinksPartialUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksPartialUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1026,7 +1026,7 @@ func (a *Client) WirelessWirelessLinksPartialUpdate(params *WirelessWirelessLink
 		PathPattern:        "/wireless/wireless-links/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksPartialUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1051,7 +1051,7 @@ func (a *Client) WirelessWirelessLinksPartialUpdate(params *WirelessWirelessLink
 }
 
 /*
-  WirelessWirelessLinksRead wireless wireless links read API
+WirelessWirelessLinksRead wireless wireless links read API
 */
 func (a *Client) WirelessWirelessLinksRead(params *WirelessWirelessLinksReadParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksReadOK, error) {
 	// TODO: Validate the params before sending
@@ -1064,7 +1064,7 @@ func (a *Client) WirelessWirelessLinksRead(params *WirelessWirelessLinksReadPara
 		PathPattern:        "/wireless/wireless-links/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksReadReader{formats: a.formats},
 		AuthInfo:           authInfo,
@@ -1089,7 +1089,7 @@ func (a *Client) WirelessWirelessLinksRead(params *WirelessWirelessLinksReadPara
 }
 
 /*
-  WirelessWirelessLinksUpdate wireless wireless links update API
+WirelessWirelessLinksUpdate wireless wireless links update API
 */
 func (a *Client) WirelessWirelessLinksUpdate(params *WirelessWirelessLinksUpdateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*WirelessWirelessLinksUpdateOK, error) {
 	// TODO: Validate the params before sending
@@ -1102,7 +1102,7 @@ func (a *Client) WirelessWirelessLinksUpdate(params *WirelessWirelessLinksUpdate
 		PathPattern:        "/wireless/wireless-links/{id}/",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
+		Schemes:            []string{"http"},
 		Params:             params,
 		Reader:             &WirelessWirelessLinksUpdateReader{formats: a.formats},
 		AuthInfo:           authInfo,
